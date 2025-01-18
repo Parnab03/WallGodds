@@ -1,8 +1,14 @@
+import React, { useContext } from "react";
 import Search from "/SearchIcon.svg";
 import Profile from "/ProfileIcon.svg";
 import Style from "./NavBar.module.css";
+import { ThemeContext } from "../../../ThemeContext";
 
 const NavBar = () => {
+
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
+
     return (
         <nav className={Style.navbar}>
             <div className={Style.MainContainer}>
@@ -28,6 +34,10 @@ const NavBar = () => {
                     <button className={Style.profileButton}>
                         <img src={Profile} alt="Profile" />
                     </button>
+
+                    <button className={Style.themeToggle} onClick={toggleTheme}>
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
                 </div>
             </div>
         </nav>
