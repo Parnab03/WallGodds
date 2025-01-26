@@ -55,17 +55,19 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Sidebar Vertical List for Mobile, Tablet, Desktop */
+/* Sidebar Vertical List for Mobile, Tablet, Desktop (Bottom-to-Top) */
 aside ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Align items vertically */
+    flex-direction: column-reverse; /* Align items from bottom to top */
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%; /* Fill the sidebar vertically */
     gap: 20px; /* Add spacing between terms */
-    text-align: center;
     writing-mode: vertical-rl; /* Display text vertically */
-    transform: rotate(180deg); /* Flip the text to be upright */
+    transform: rotate(180deg); /* Rotate text to appear upright */
 }
 
 aside ul li {
@@ -79,7 +81,6 @@ aside ul li {
 aside ul li:hover {
     color: #007BFF; /* Highlight on hover */
 }
-
 
 
 /* Sidebar */
