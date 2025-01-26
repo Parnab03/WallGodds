@@ -55,6 +55,33 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+/* Sidebar Vertical List for Mobile, Tablet, Desktop */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    gap: 20px; /* Add spacing between terms */
+    text-align: center;
+    writing-mode: vertical-rl; /* Display text vertically */
+    transform: rotate(180deg); /* Flip the text to be upright */
+}
+
+aside ul li {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+aside ul li:hover {
+    color: #007BFF; /* Highlight on hover */
+}
+
+
+
 /* Sidebar */
 aside {
     position: fixed;
@@ -68,18 +95,7 @@ aside {
     align-items: center;
     padding-top: 60px;
 }
-aside ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-aside ul li {
-    font-size: 16px;
-    font-weight: 500;
-}
+
 footer {
     margin-top: auto;
     padding: 10px;
@@ -143,3 +159,4 @@ main {
     border: none;
     cursor: pointer;
 }
+
