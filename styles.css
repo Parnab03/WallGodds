@@ -8,6 +8,22 @@ body {
     color: #333;
 }
 
+.image-container {
+            position: relative;
+            display: inline-block;
+        }
+.main-image {
+            width: 100%;
+            height: auto;
+        }
+.logo {
+            position: absolute;
+            bottom: 10px; /* Position logo at the bottom */
+            right: 10px; /* Position logo at the right */
+            width: 100px; /* Adjust the logo size */
+            opacity: 0.8; /* Optional, make the logo semi-transparent */
+        }
+
 /* Header */
 header {
     display: flex;
