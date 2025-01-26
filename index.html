@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Comfortaa:wght@300..700&family=Holtwood+One+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-            rel="stylesheet" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>WallGodds</title>
-    </head>
-    <body>
-        <div id="root"></div>
-        <script type="module" src="/src/main.jsx"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallGodds</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">WallGodds</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Upload</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-profile">
+            <input type="text" placeholder="Search your wallpaper">
+            <button><img src="search-icon.png" alt="Search"></button>
+            <button><img src="profile-icon.png" alt="Profile"></button>
+        </div>
+    </header>
+
+    <aside>
+        <ul>
+            <li>Mobile</li>
+            <li>Tablet</li>
+            <li>Desktop</li>
+        </ul>
+        <footer>&copy;CopyRight</footer>
+    </aside>
+
+    <main>
+        <div class="wallpaper-grid">
+            <div class="wallpaper-card">
+                <img src="wallpaper1.jpg" alt="Wallpaper">
+                <div class="wallpaper-info">
+                    <span>@user_123</span>
+                    <button>Download <img src="download-icon.png" alt="Download"></button>
+                </div>
+                <div class="actions">
+                    <button><img src="bookmark-icon.png" alt="Bookmark"></button>
+                    <button><img src="heart-icon.png" alt="Like"></button>
+                </div>
+            </div>
+            <div class="wallpaper-card">
+                <img src="wallpaper2.jpg" alt="Wallpaper">
+                <div class="wallpaper-info">
+                    <span>@user_123</span>
+                    <button>Download <img src="download-icon.png" alt="Download"></button>
+                </div>
+                <div class="actions">
+                    <button><img src="bookmark-icon.png" alt="Bookmark"></button>
+                    <button><img src="heart-icon.png" alt="Like"></button>
+                </div>
+            </div>
+            <!-- Repeat for other wallpapers -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
