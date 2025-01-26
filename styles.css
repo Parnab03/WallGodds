@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(to right, #fdfbfb, #ebedee);
-    color: #333;
+    background-image: url('Frontend/public/BACKGROUND.svg'); 
 }
 
 .image-container {
