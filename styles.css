@@ -55,19 +55,31 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Sidebar Vertical List for Mobile, Tablet, Desktop (Bottom-to-Top) */
+/* Sidebar Styling */
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust width as needed */
+    height: 100%; /* Full height of the page */
+    background: linear-gradient(to bottom, #f3f4f7, #e8e9ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Sidebar Vertical List for Bottom-to-Top Alignment */
 aside ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column-reverse; /* Align items from bottom to top */
+    flex-direction: column-reverse; /* Items aligned from bottom to top */
     justify-content: flex-start;
     align-items: center;
     height: 100%; /* Fill the sidebar vertically */
-    gap: 20px; /* Add spacing between terms */
-    writing-mode: vertical-rl; /* Display text vertically */
-    transform: rotate(180deg); /* Rotate text to appear upright */
+    gap: 20px; /* Add spacing between items */
 }
 
 aside ul li {
@@ -76,26 +88,14 @@ aside ul li {
     color: #333;
     cursor: pointer;
     transition: color 0.3s;
+    writing-mode: vertical-rl; /* Rotate text to be vertical */
+    transform: rotate(180deg); /* Make the text upright */
 }
 
 aside ul li:hover {
-    color: #007BFF; /* Highlight on hover */
+    color: #007BFF; /* Highlight text on hover */
 }
 
-
-/* Sidebar */
-aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: linear-gradient(to bottom, #f3f4f7, #e8e9ec);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-}
 
 footer {
     margin-top: auto;
