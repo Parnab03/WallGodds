@@ -74,10 +74,10 @@ nav ul li a:hover {
 /* Sidebar Styling */
 aside {
     position: fixed;
-    top: 0;
+    top: 10;
     left: 0;
     width: 150px; /* Adjust width as needed */
-    height: 100%; /* Full height of the page */
+    height: 90%; /* Full height of the page */
     background: linear-gradient(to bottom, #f3f4f7, #e8e9ec);
     display: flex;
     justify-content: center;
