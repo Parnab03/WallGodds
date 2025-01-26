@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .imageContainer {
@@ -12,15 +13,15 @@
 
 .bottomBar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding-top: 10px;
 }
 
 .icons {
     display: flex;
     gap: 13px;
-    padding-right: 96%;
-    margin-left: -27%;
 }
 
 .userInfo {
@@ -31,6 +32,10 @@
 .username {
     font-size: 20px;
     color: #808080;
-    margin-right: 7%;
+    margin-right: 7px;
 }
 
+.downloadBtn {
+    width: 200px; 
+    cursor: pointer;
+}

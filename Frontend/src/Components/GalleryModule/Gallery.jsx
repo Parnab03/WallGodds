@@ -1,20 +1,24 @@
-import ImgCard from "./DesktopSection/ImgCards/ImgCard";
-import img1 from "./DesktopSection/DesktopAssets/img_1.png";
-import img2 from "./DesktopSection/DesktopAssets/img_2.png";
-import img3 from "./DesktopSection/DesktopAssets/img_3.png";
-import img4 from "./DesktopSection/DesktopAssets/img_4.png";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Desktop from "./DesktopSection/Desktop";
+import Mobile from "./MobileSection/mobileAssets/Mobile.jsx";
+import Tablet from "./TabletSection/TabletAssets/Tablet.jsx";
 import Styles from "./Gallery.module.css";
+import SideBarWithNav from "../CommonModule/SideBarModule/SideBar";
 
 const Gallery = () => {
     return (
-        <div className={Styles.gallery}>
-            <div className={Styles.imgCards}>
-                <ImgCard imageSrc={img1} />
-                <ImgCard imageSrc={img2} />
+        <div className={Styles.container}>
+            <div className={Styles.sidebar} >
+               <SideBarWithNav/>
             </div>
-            <div className={Styles.imgCards}>
-                <ImgCard imageSrc={img3} />
-                <ImgCard imageSrc={img4} />
+            <div className={Styles.content}>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/gallery/desktop" />} />
+                    <Route path="/desktop" element={<Desktop />} />
+                    <Route path="/mobile" element={<Mobile />} />
+                    <Route path="/tablet" element={<Tablet />} />
+                </Routes>
             </div>
         </div>
     );
