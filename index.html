@@ -3,51 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WallGems</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <title>WallGodds - Wallpaper Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">WallGems</div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Upload</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search your wallpaper">
-            <button><img src="search-icon.png" alt="Search"></button>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <h1>WallGodds</h1>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Search your wallpaper">
+                <i data-lucide="search"></i>
+            </div>
+
+            <div class="nav-links">
+                <button>Home</button>
+                <button>Gallery</button>
+                <button>Upload</button>
+                <button>About Us</button>
+                <i data-lucide="user"></i>
+            </div>
         </div>
-        <div class="profile-icon"><img src="user-icon.png" alt="User"></div>
-    </header>
+    </nav>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="category-buttons">
+            <button class="category-btn" data-category="tablet">Tablet</button>
+            <button class="category-btn" data-category="mobile">Mobile</button>
+            <button class="category-btn active" data-category="desktop">Desktop</button>
+        </div>
+    </div>
+
+    <!-- Wallpaper Grid -->
     <main>
-        <aside class="sidebar">
-            <button id="mobileBtn" class="active">Mobile</button>
-            <button id="tabletBtn">Tablet</button>
-            <button id="desktopBtn">Desktop</button>
-        </aside>
-        <section id="wallpaperGallery">
-            <div class="wallpaper" data-category="mobile">
-                <img src="car.jpg" alt="Car">
-                <div class="info">@user_123 <button class="download">Download</button></div>
-            </div>
-            <div class="wallpaper" data-category="mobile">
-                <img src="bubbles.jpg" alt="Bubbles">
-                <div class="info">@user_123 <button class="download">Download</button></div>
-            </div>
-            <div class="wallpaper" data-category="mobile">
-                <img src="galaxy.jpg" alt="Galaxy">
-                <div class="info">@user_123 <button class="download">Download</button></div>
-            </div>
-            <div class="wallpaper" data-category="mobile">
-                <img src="sunset.jpg" alt="Sunset">
-                <div class="info">@user_123 <button class="download">Download</button></div>
-            </div>
-        </section>
+        <div class="wallpaper-grid">
+            <!-- Wallpapers will be added here by JavaScript -->
+        </div>
     </main>
+
+    <!-- Copyright -->
+    <footer>
+        <p>@CopyRight</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
