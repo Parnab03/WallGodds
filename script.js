@@ -1,30 +1,135 @@
-// JavaScript for WallGodds
+// Initialize Lucide icons
+lucide.createIcons();
 
-// Search functionality
-document.querySelector('header .search-profile input').addEventListener('input', function(event) {
-    const query = event.target.value.toLowerCase();
-    const wallpapers = document.querySelectorAll('.wallpaper-card');
-
-    wallpapers.forEach(wallpaper => {
-        const username = wallpaper.querySelector('.wallpaper-info span').textContent.toLowerCase();
-        if (username.includes(query)) {
-            wallpaper.style.display = 'block';
-        } else {
-            wallpaper.style.display = 'none';
+// Wallpaper data organized by categories
+const wallpapersByCategory = {
+    desktop: [
+        {
+            id: 1,
+            imageUrl: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
+        },
+        {
+            id: 2,
+            imageUrl: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
         }
+    ],
+    mobile: [
+        {
+            id: 3,
+            imageUrl: "https://images.unsplash.com/photo-1616348436168-de43ad0db179",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
+        },
+        {
+            id: 4,
+            imageUrl: "https://images.unsplash.com/photo-1551376347-075b0121a65b",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
+        }
+    ],
+    tablet: [
+        {
+            id: 5,
+            imageUrl: "https://images.unsplash.com/photo-1567447615075-6178d502a7ae",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
+        },
+        {
+            id: 6,
+            imageUrl: "https://images.unsplash.com/photo-1544256718-3bcf237f3974",
+            username: "user_123",
+            isLiked: false,
+            isBookmarked: false,
+        }
+    ]
+};
+
+let currentCategory = 'desktop';
+
+// DOM elements
+const wallpaperGrid = document.querySelector('.wallpaper-grid');
+const categoryButtons = document.querySelectorAll('.category-btn');
+
+// Render wallpapers for current category
+function renderWallpapers() {
+    const wallpapers = wallpapersByCategory[currentCategory];
+    wallpaperGrid.innerHTML = wallpapers.map(wallpaper => `
+        <div class="wallpaper-card">
+            <img src="${wallpaper.imageUrl}" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(${wallpaper.id})" id="bookmark-${wallpaper.id}">
+                            <i data-lucide="bookmark"></i>
+                        </button>
+                        <button onclick="toggleLike(${wallpaper.id})" id="like-${wallpaper.id}">
+                            <i data-lucide="heart"></i>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@${wallpaper.username}</span>
+                        <button class="download-btn">
+                            <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    // Reinitialize icons for the new content
+    lucide.createIcons();
+}
+
+// Toggle like state
+function toggleLike(id) {
+    // Find wallpaper across all categories
+    for (const category in wallpapersByCategory) {
+        const wallpaper = wallpapersByCategory[category].find(w => w.id === id);
+        if (wallpaper) {
+            wallpaper.isLiked = !wallpaper.isLiked;
+            const button = document.getElementById(`like-${id}`);
+            button.classList.toggle('active');
+            break;
+        }
+    }
+}
+
+// Toggle bookmark state
+function toggleBookmark(id) {
+    // Find wallpaper across all categories
+    for (const category in wallpapersByCategory) {
+        const wallpaper = wallpapersByCategory[category].find(w => w.id === id);
+        if (wallpaper) {
+            wallpaper.isBookmarked = !wallpaper.isBookmarked;
+            const button = document.getElementById(`bookmark-${id}`);
+            button.classList.toggle('active');
+            break;
+        }
+    }
+}
+
+// Handle category selection
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Update current category and render
+        currentCategory = button.dataset.category;
+        renderWallpapers();
     });
 });
 
-// Like and Bookmark actions
-document.querySelectorAll('.actions button').forEach(button => {
-    button.addEventListener('click', function() {
-        const icon = this.querySelector('img');
-        const isActive = this.classList.toggle('active');
-
-        if (isActive) {
-            icon.src = icon.src.replace('icon.png', 'icon-active.png');
-        } else {
-            icon.src = icon.src.replace('icon-active.png', 'icon.png');
-        }
-    });
-});
+// Initial render
+renderWallpapers();
