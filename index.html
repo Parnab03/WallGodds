@@ -3,90 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WallGodds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>WallGems</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <div class="image-container">
-        <img src="Frontend/public/Logo.svg" alt="Main Image" class="main-image">
-        
-        </div>
+        <div class="logo">WallGems</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">Gallery</a></li>
                 <li><a href="#">Upload</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>
         </nav>
-        <div class="search-profile">
+        <div class="search-bar">
             <input type="text" placeholder="Search your wallpaper">
-            <button><img src="Frontend/public/SearchIcon.svg" alt="Search"></button>
-            <button><img src="Frontend/public/ProfileIcon.svg" alt="Profile"></button>
+            <button><img src="search-icon.png" alt="Search"></button>
         </div>
+        <div class="profile-icon"><img src="user-icon.png" alt="User"></div>
     </header>
-
-    <aside>
-        <ul>
-            <li>Mobile</li>
-            <li>Tablet</li>
-            <li>Desktop</li>
-        </ul>
-        <footer>&copy;CopyRight</footer>
-    </aside>
-
     <main>
-        <div class="wallpaper-grid">
-            <div class="wallpaper-card">
-                <img src="Wallpapers/wel1.png" alt="Wallpaper">
-                <div class="wallpaper-info">
-                    <span>@user_123</span>
-                    <button><img src="Frontend/public/DownloadButton.svg" alt="Download"></button>
-                </div>
-                <div class="actions">
-                    <button><img src="Frontend/public/Save.svg" alt="Bookmark"></button>
-                    <button><img src="Frontend/public/Heart.svg" alt="Like"></button>
-                </div>
+        <aside class="sidebar">
+            <button id="mobileBtn" class="active">Mobile</button>
+            <button id="tabletBtn">Tablet</button>
+            <button id="desktopBtn">Desktop</button>
+        </aside>
+        <section id="wallpaperGallery">
+            <div class="wallpaper" data-category="mobile">
+                <img src="car.jpg" alt="Car">
+                <div class="info">@user_123 <button class="download">Download</button></div>
             </div>
-            <div class="wallpaper-card">
-                <img src="Wallpapers/wel2.png" alt="Wallpaper">
-                <div class="wallpaper-info">
-                    <span>@user_123</span>
-                    <button><img src="Frontend/public/DownloadButton.svg" alt="Download"></button>
-                </div>
-                <div class="actions">
-                    <button><img src="Frontend/public/Save.svg" alt="Bookmark"></button>
-                    <button><img src="Frontend/public/Heart.svg" alt="Like"></button>
-                </div>
+            <div class="wallpaper" data-category="mobile">
+                <img src="bubbles.jpg" alt="Bubbles">
+                <div class="info">@user_123 <button class="download">Download</button></div>
             </div>
-            <div class="wallpaper-card">
-                <img src="Wallpapers/wel3.png" alt="Wallpaper">
-                <div class="wallpaper-info">
-                    <span>@user_123</span>
-                    <button><img src="Frontend/public/DownloadButton.svg" alt="Download"></button>
-                </div>
-                <div class="actions">
-                    <button><img src="Frontend/public/Save.svg" alt="Bookmark"></button>
-                    <button><img src="Frontend/public/Heart.svg" alt="Like"></button>
-                </div>
+            <div class="wallpaper" data-category="mobile">
+                <img src="galaxy.jpg" alt="Galaxy">
+                <div class="info">@user_123 <button class="download">Download</button></div>
             </div>
-            <div class="wallpaper-card">
-                <img src="Wallpapers/wel4.png" alt="Wallpaper">
-                <div class="wallpaper-info">
-                    <span>@user_123</span>
-                    <button><img src="Frontend/public/DownloadButton.svg" alt="Download"></button>
-                </div>
-                <div class="actions">
-                    <button><img src="Frontend/public/Save.svg" alt="Bookmark"></button>
-                    <button><img src="Frontend/public/Heart.svg" alt="Like"></button>
-                </div>
+            <div class="wallpaper" data-category="mobile">
+                <img src="sunset.jpg" alt="Sunset">
+                <div class="info">@user_123 <button class="download">Download</button></div>
             </div>
-            <!-- Repeat for other wallpapers -->
-        </div>
+        </section>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
