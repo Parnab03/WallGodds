@@ -40,3 +40,82 @@
 .read-the-docs {
   color: #888;
 } */
+
+/* CSS for the error page */
+
+.error-text {
+  font-family: Comfortaa;
+  background: -webkit-linear-gradient(0deg, #2a00ff, #ff5959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding: 10px 8vw;
+  font-size: 2vw;
+  font-weight: 200px;
+}
+
+.error-heading,
+.home_back_button {
+  font-family: Rubik Mono ONE;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-weight: 400;
+}
+
+.error-heading {
+  font-size: 5vw;
+  text-shadow: 0.8vw 0.8vw black;
+}
+
+.mainCard {
+  /* border: 1px solid black; */
+  margin: 2vw;
+  display: flex;
+  flex-direction: column;
+  /* padding: 20px; */
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgb(173, 173, 173);
+}
+
+.error-card-header {
+  height: 4vw;
+  margin: 0;
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: center;
+  /* border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black; */
+  background-color: #008fff;
+}
+
+.error-card-header img {
+  height: 3vw;
+}
+
+.error-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.home_back_button {
+  border: 1px solid black;
+  font-size: 3vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d8d1fc;
+  border-radius: 5px;
+  padding: 1vw;
+  text-shadow: 0.4vw 0.4vw black;
+  margin: 20px;
+  cursor: pointer;
+}
+.home_back_button img {
+  height: 3vw;
+  padding: 0 15px;
+}
