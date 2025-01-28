@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WallGodds - Wallpaper Website</title>
@@ -9,39 +8,204 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <h1>WallGodds</h1>
-            
-            <div class="search-container">
-                <input type="text" placeholder="Search your wallpaper">
-                <i data-lucide="search"></i>
-            </div>
-
-            <div class="nav-links">
-                <button>Home</button>
-                <button>Gallery</button>
-                <button>Upload</button>
-                <button>About Us</button>
-                <i data-lucide="user"></i>
-            </div>
-        </div>
-    </nav>
+    <header class="site-header">
+            <div class="header-container">
+    <a href="/" class="logo">WallGodds</a>
+<nav class="_navbar_5pxw7_1"><div class="_MainContainer_5pxw7_10"><div class="_navItems_5pxw7_40"><ul class="_menu_5pxw7_47"><li class="_menuItem_5pxw7_56">Home</li><li class="_menuItem_5pxw7_56">Gallery</li><li class="_menuItem_5pxw7_56">Upload</li><li class="_menuItem_5pxw7_56">About Us</li></ul></div><div class="_searchContainer_5pxw7_66"><input class="_searchInput_5pxw7_77" type="text" placeholder="Search your wallpaper" fdprocessedid="inw40f"><button class="_searchButton_5pxw7_93" fdprocessedid="l0umv"><img src="/SearchIcon.svg" alt="Search"></button></div><div class="_profileContainer_5pxw7_100"><button class="_profileButton_5pxw7_107" fdprocessedid="ju6e5o"><img src="/ProfileIcon.svg" alt="Profile"></button></div></div></nav>
+               </div>
+        </header>
 
     <!-- Categories -->
     <div class="categories">
         <div class="category-buttons">
-            <button class="category-btn" data-category="tablet">Tablet</button>
-            <button class="category-btn" data-category="mobile">Mobile</button>
-            <button class="category-btn active" data-category="desktop">Desktop</button>
+            <button class="category-btn" data-category="tablet" fdprocessedid="jc62tu">Tablet</button>
+            <button class="category-btn" data-category="mobile" fdprocessedid="zswblf">Mobile</button>
+            <button class="category-btn active" data-category="desktop" fdprocessedid="6zttkd">Desktop</button>
         </div>
     </div>
 
     <!-- Wallpaper Grid -->
     <main>
         <div class="wallpaper-grid">
-            <!-- Wallpapers will be added here by JavaScript -->
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(1)" id="bookmark-1" fdprocessedid="sjxf2p">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(1)" id="like-1" fdprocessedid="00roog">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="z68hsm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+    
+        
+
+<div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div><div class="wallpaper-card">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809" alt="Wallpaper">
+            <div class="wallpaper-overlay">
+                <div class="overlay-content">
+                    <div class="overlay-actions">
+                        <button onclick="toggleBookmark(2)" id="bookmark-2" fdprocessedid="fkf1tf">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bookmark" class="lucide lucide-bookmark"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+                        </button>
+                        <button onclick="toggleLike(2)" id="like-2" fdprocessedid="8bv0qd">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                        </button>
+                    </div>
+                    <div class="user-actions">
+                        <span>@user_123</span>
+                        <button class="download-btn" fdprocessedid="0wfggl">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" style="width: 16px; height: 16px;" class="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
 
     <!-- Copyright -->
@@ -50,5 +214,8 @@
     </footer>
 
     <script src="script.js"></script>
+
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
 </body>
 </html>
