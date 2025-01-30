@@ -334,83 +334,75 @@ main {
     margin-right: auto;
 }
 
-.wallpaper-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+
+.wallpaper-gallery {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
 .wallpaper-card {
     position: relative;
-    border-radius: 0.5rem;
+    background: #fff;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.wallpaper-card:hover {
+    transform: translateY(-5px);
 }
 
 .wallpaper-card img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
-.wallpaper-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.wallpaper-card:hover .wallpaper-overlay {
-    opacity: 1;
-}
-
-.overlay-content {
+.wallpaper-info {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    color: white;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
 }
 
-.overlay-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.overlay-actions button {
+.like-btn, .save-btn, .download-btn {
     background: none;
     border: none;
-    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: transform 0.2s;
+    padding: 5px 10px;
 }
 
-.overlay-actions button:hover {
-    transform: scale(1.1);
+/* Like Button: Default state */
+.like-btn {
+    color: grey;
+    transition: color 0.3s ease;
 }
 
-.overlay-actions button.active {
-    color: #ef4444;
+/* Like Button: When clicked */
+.like-btn.liked {
+    color: red;
 }
 
+/* Save Button: Default state */
+.save-btn {
+    color: grey;
+    transition: color 0.3s ease;
+}
+
+/* Save Button: When clicked */
+.save-btn.saved {
+    color: blue;
+}
+
+/* Download Button */
 .download-btn {
-    background: white;
-    color: #111827;
-    padding: 0.25rem 1rem;
-    border-radius: 9999px;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.download-btn:hover {
-    background: #f3f4f6;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px 15px;
 }
 
 /* Footer */
