@@ -336,19 +336,20 @@ main {
 
 
 .wallpaper-gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
     gap: 20px;
     padding: 20px;
 }
 
 .wallpaper-card {
-    position: relative;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
+
 
 .wallpaper-card:hover {
     transform: translateY(-5px);
