@@ -78,6 +78,41 @@ body {
     color: #44bdde
 }
 
+/* Styling for the menu items */
+._menuItem_5pxw7_56 {
+    position: relative;
+    padding-bottom: 5px; /* Space for the underline */
+}
+
+/* Underline effect for active menu item */
+._menuItem_5pxw7_56.active {
+    color: #000000; /* Make text color transparent so the gradient underline stands out */
+}
+
+._menuItem_5pxw7_56.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background: linear-gradient(45deg, #388fd361, #ff9d006e, #d9000061, #97008869); /* Gradient underline */
+    transition: width 0.3s ease, background 0.3s ease;
+    border-radius:600px;
+}
+
+/* Optional: Adding a hover effect on other menu items */
+._menuItem_5pxw7_56:hover {
+    color: #2d93da; /* Make text color transparent on hover */
+}
+
+._menuItem_5pxw7_56:hover::after {
+    width: 100%; /* Make the underline full width on hover */
+    background: linear-gradient(45deg, #388fd3cc, #ff9d00cc, #d90000cc, #970088cc); /* Gradient underline on hover */
+}
+
+
+
 ._searchContainer_5pxw7_66 {
     padding: 4px 2px;
     width: 650px;
