@@ -19,39 +19,6 @@ const wallpapersByCategory = {
             isBookmarked: false,
         }
     ],
-    mobile: [
-        {
-            id: 3,
-            imageUrl: "https://images.unsplash.com/photo-1616348436168-de43ad0db179",
-            username: "user_123",
-            isLiked: false,
-            isBookmarked: false,
-        },
-        {
-            id: 4,
-            imageUrl: "https://images.unsplash.com/photo-1551376347-075b0121a65b",
-            username: "user_123",
-            isLiked: false,
-            isBookmarked: false,
-        }
-    ],
-    tablet: [
-        {
-            id: 5,
-            imageUrl: "https://images.unsplash.com/photo-1567447615075-6178d502a7ae",
-            username: "user_123",
-            isLiked: false,
-            isBookmarked: false,
-        },
-        {
-            id: 6,
-            imageUrl: "https://images.unsplash.com/photo-1544256718-3bcf237f3974",
-            username: "user_123",
-            isLiked: false,
-            isBookmarked: false,
-        }
-    ]
-};
 
 let currentCategory = 'desktop';
 
