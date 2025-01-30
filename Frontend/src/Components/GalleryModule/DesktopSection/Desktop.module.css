@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5.5%;
+    margin-top: 0;
+    overflow: visible;
+    min-height: 100vh;
+}
+
+.imgCards {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3%;
+    gap: 3.5%;
+}

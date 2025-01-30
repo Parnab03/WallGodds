@@ -1,20 +1,30 @@
 .navbar {
-    width: 100%;
     display: flex;
     align-items: center;
-    margin: 0;
     background-color: white;
     border-radius: 10px;
+    width: 1531px;
+    height: 88.46px;
+    margin-left: 36px;
+    margin-top: 10.77px;
+    box-sizing: border-box;
+
+}
+
+.navbarWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .MainContainer {
     position: relative;
-    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     padding: 13px 20px;
     box-sizing: border-box;
-    margin: 0;
+    width: 100%;
 }
 
 .MainContainer::before {
@@ -24,13 +34,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        45deg,
-        rgba(0, 143, 255, 0.80),
-        rgba(255, 157, 0, 0.80),
-        rgba(217, 0, 0, 0.80),
-        rgba(151, 0, 136, 0.80)
-    );
+    background: linear-gradient(45deg,
+            rgba(0, 143, 255, 0.8),
+            rgba(255, 157, 0, 0.8),
+            rgba(217, 0, 0, 0.8),
+            rgba(151, 0, 136, 0.8));
     border-radius: 10.053px;
     z-index: -1;
     padding: 1px;
@@ -59,6 +67,31 @@
     transition: color 0.3s;
 }
 
+.menuItem a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    transition: color 0.3s, font-weight 0.3s;
+    position: relative;
+}
+
+.menuItem.active a {
+    font-weight: bold;
+    border-bottom: 3px solid black;
+}
+
+.menuItem.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: height 0.3s;
+}
+
 .menuItem:hover {
     color: #61dafb;
 }
@@ -68,7 +101,7 @@
     width: 650px;
     display: flex;
     align-items: center;
-    opacity: 0.90;
+    opacity: 0.9;
     border: 1px solid #808080;
     background: rgba(255, 255, 255, 0);
     border-radius: 10px;
@@ -107,6 +140,21 @@
 .profileButton {
     background: none;
     border: none;
+    cursor: pointer;
+}
+
+.logoContainer {
+    margin-right: 20px;
+    padding-left: 3%;
+    display: flex;
+    width: 206px;
+    height: 40px;
+}
+
+.logo {
+    padding: 0;
+    width: 200px;
+    margin-right: 6%;
     cursor: pointer;
 }
 
@@ -167,4 +215,16 @@
     .searchInput {
         padding: 8px;
     }
+}
+
+.menuLink {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    transition: color 0.3s, font-weight 0.3s;
+}
+
+.active {
+    font-weight: bold;
+    border-bottom: 3px solid black;
 }

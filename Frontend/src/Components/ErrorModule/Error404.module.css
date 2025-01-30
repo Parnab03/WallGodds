@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px;
+  box-shadow: -21px 4px 60.7px 0px #C1C1C1;
+  margin: 20px 10%;
+}
+
+.container_top {
+  background-color: #008fff;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 20px 20px 0 0;
+}
+
+.elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 4%;
+  gap: 10px;
+}
+
+.elements > img {
+  width: 25px;
+}
+
+.errorCode {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Rubik Mono One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 55px;
+  margin: 3% 10px 4% 10px;
+  color: white;
+  text-shadow: 5px 5px black;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.errorCode > span {
+  color: #F8CC06;
+}
+
+.errorMessage {
+  text-align: center;
+  font-family: "Comfortaa", sans-serif;
+  margin: 0 11%;
+  font-size: 23px;
+  font-weight: 700;
+  margin: 3% 7%;
+  padding: 0 40px;
+  background: -webkit-linear-gradient(right, #FF5959, #2A00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homeThisWay {
+  background-color: #DFD1FC;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  margin: 2% 10px 0 10px;
+  padding: 1.5% 2%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+.homeMessage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.homeMessage > img {
+  width: 40px;
+}
+
+.homeMessage > h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Rubik Mono One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: white;
+  text-shadow: 3px 3px black;
+  -webkit-text-stroke: 1.5px black;
+}
+
+.homeMessage > h1 > span {
+  color: #F8CC06;
+}
+
+.pageNotFound {
+  background-color: transparent;
+  position: absolute;
+  border-radius: 10px;
+  border: 1px solid #808080;
+  font-family: "Comfortaa", sans-serif;
+  color: #808080;
+  font-size: 0.8rem;
+  font-weight: 400;
+  right: 0;
+  bottom: -55px;
+  padding: 5px 25px;
+}
+
+@media (max-width: 768px) {
+  .container_top {
+    height: 50px;
+  }
+  .elements {
+    gap: 7px;
+    margin: 0 5%;
+  }
+  .elements > img {
+    width: 15px;
+  }
+  .errorCode {
+    font-size: 30px;
+    text-shadow: 3px 2px black;
+  }
+  .errorMessage {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+  .homeMessage {
+    gap: 15px;
+  }
+  .homeMessage > img {
+    width: 25px;
+  }
+  .homeMessage > h1 {
+    font-size: 25px;
+    text-shadow: 1.5px 1.5px black;
+  }
+  .pageNotFound {
+    border-radius: 8px;
+    font-size: 0.6rem;
+    bottom: -40px;
+  }
+}
