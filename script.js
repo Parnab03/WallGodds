@@ -56,35 +56,6 @@ function renderWallpapers() {
     
     // Reinitialize icons for the new content
     lucide.createIcons();
-}
-
-// Toggle like state
-function toggleLike(id) {
-    // Find wallpaper across all categories
-    for (const category in wallpapersByCategory) {
-        const wallpaper = wallpapersByCategory[category].find(w => w.id === id);
-        if (wallpaper) {
-            wallpaper.isLiked = !wallpaper.isLiked;
-            const button = document.getElementById(`like-${id}`);
-            button.classList.toggle('active');
-            break;
-        }
-    }
-}
-
-// Toggle bookmark state
-function toggleBookmark(id) {
-    // Find wallpaper across all categories
-    for (const category in wallpapersByCategory) {
-        const wallpaper = wallpapersByCategory[category].find(w => w.id === id);
-        if (wallpaper) {
-            wallpaper.isBookmarked = !wallpaper.isBookmarked;
-            const button = document.getElementById(`bookmark-${id}`);
-            button.classList.toggle('active');
-            break;
-        }
-    }
-}
 
 // Handle category selection
 categoryButtons.forEach(button => {
@@ -100,3 +71,35 @@ categoryButtons.forEach(button => {
 
 // Initial render
 renderWallpapers();
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Like Button Functionality
+    document.querySelectorAll(".like-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            this.classList.toggle("liked");
+            this.innerHTML = this.classList.contains("liked") ? "❤️" : "🤍";
+        });
+    });
+
+    // Save Button Functionality
+    document.querySelectorAll(".save-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            this.classList.toggle("saved");
+            this.innerHTML = this.classList.contains("saved") ? "📌" : "🔖";
+        });
+    });
+
+    // Download Button Functionality
+    document.querySelectorAll(".download-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const imageUrl = this.getAttribute("data-img");
+            const link = document.createElement("a");
+            link.href = imageUrl;
+            link.download = imageUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    });
+});
+
