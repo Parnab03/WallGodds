@@ -95,7 +95,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 3px; /* Thickness of the underline */
+    height: 2px; /* Thickness of the underline */
     background: linear-gradient(45deg, #388fd361, #ff9d006e, #d9000061, #97008869); /* Gradient underline */
     transition: width 0.3s ease, background 0.3s ease;
     border-radius:600px;
