@@ -373,39 +373,56 @@ main {
     margin-right: auto;
 }
 
-
-.wallpaper-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
-    gap: 20px;
-    padding: 20px;
-}
-
+/* Wallpaper Card */
 .wallpaper-card {
     background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: 16px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    width: 280px;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
-
-.wallpaper-card:hover {
-    transform: translateY(-5px);
-}
-
-.wallpaper-card img {
+/* Image Container */
+.image-container {
+    position: relative;
     width: 100%;
-    height: auto;
-    display: block;
 }
 
+.image-container img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Top Right Buttons (Save & Like) */
+.top-right-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.top-right-buttons .like-btn,
+.top-right-buttons .save-btn {
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Wallpaper Info */
 .wallpaper-info {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
 }
 
 .like-btn, .save-btn, .download-btn {
@@ -416,33 +433,37 @@ main {
     padding: 5px 10px;
 }
 
-/* Like Button: Default state */
+
+/* Like and Save Button Effects */
 .like-btn {
     color: grey;
-    transition: color 0.3s ease;
 }
 
-/* Like Button: When clicked */
 .like-btn.liked {
     color: red;
 }
 
-/* Save Button: Default state */
 .save-btn {
     color: grey;
-    transition: color 0.3s ease;
 }
 
-/* Save Button: When clicked */
 .save-btn.saved {
     color: blue;
 }
 
+
 /* Download Button */
 .download-btn {
     background: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 5px 15px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Footer */
