@@ -365,6 +365,12 @@ body {
     font-weight: 500;
 }
 
+.wallpaper-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 2 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+}
 /* Main content */
 main {
     margin-left: 12rem;
@@ -382,18 +388,21 @@ main {
     width: 280px;
     text-align: center;
     padding-bottom: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Creates 2 equal-width columns */
 }
 
 /* Image Container */
 .image-container {
     position: relative;
     width: 100%;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
 }
 
 .image-container img {
     width: 100%;
     display: block;
     border-radius: 16px;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
 }
 
 /* Top Right Buttons (Save & Like) */
