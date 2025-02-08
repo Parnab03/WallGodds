@@ -81,6 +81,45 @@ Add your wallpapers here 👇
   - **Designer**: Dinesh Bhardwaj
   - **Category**: Tablet
 
+## 7. [Dinesh]_[nature1].png**  
+ - **Title:** Majestic Mountain Reflection  
+ - **Description:** A breathtaking wallpaper featuring a serene mountain landscape reflecting on a crystal-clear lake under a stunning twilight sky.
+ - **Designer**: Dinesh Bhardwaj  
+ - **Category:** Desktop  
+
+## 8. [Dinesh]_[nature4].png**  
+ - **Title:** Enchanted Waterfall Paradise  
+ - **Description:** A stunning desktop wallpaper featuring a lush green valley with a cascading waterfall, surrounded by blooming flowers and bright blue skies.  
+ - **Designer**: Dinesh Bhardwaj
+ - **Category:** Desktop  
+
+
+
+## 9. [Dinesh]_[nature2].png**  
+ - **Title:** Golden Forest Bridge  
+ - **Description:** A mesmerizing mobile wallpaper showcasing a sunlit forest path with a wooden bridge, surrounded by golden autumn hues.  
+  - **Designer**: Dinesh Bhardwaj
+ - **Category:** Mobile  
+
+## 10. [Dinesh]_[nature3].png**  
+ - **Title:** Tropical Sunset Beach  
+ - **Description:** A vibrant mobile wallpaper depicting a tropical beach at sunset, with palm trees silhouetted against a glowing orange and purple sky.  
+ - **Designer**: Dinesh Bhardwaj
+ - **Category:** Mobile  
+
+
+## 11. [Dinesh]_[nature5].png**  
+ - **Title:** Tranquil Mountain Lake  
+ - **Description:** A peaceful tablet wallpaper showcasing a scenic mountain lake with perfect reflections of the sky, a wooden dock, and floating clouds.  
+ - **Designer**: Dinesh Bhardwaj
+ - **Category:** Tablet  
+
+## 12. [Dinesh]_[nature6].png**  
+ - **Title:** Autumn Creek Serenity  
+ - **Description:** A warm and inviting tablet wallpaper displaying a beautiful autumn forest with a flowing creek, golden leaves, and soft sunlight.  
+ - **Designer**: Dinesh Bhardwaj
+ - **Category:** Tablet  
+
 
 
 WallGodds values creativity and collaboration. We can't wait to see your contributions! If you have any questions or need help, feel free to connect with our community on [Discord](https://discord.gg/kTQ5KWANp8).  
