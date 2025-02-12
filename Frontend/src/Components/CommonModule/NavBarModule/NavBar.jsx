@@ -12,6 +12,7 @@ const NavBar = () => {
             <div className={Style.logoContainer}>
                 <img className={Style.logo} src={Logo} alt="Logo" />
             </div>
+
             {/* Navigation Menu */}
             <nav className={Style.navbar}>
                 <div className={Style.MainContainer}>

@@ -81,6 +81,36 @@ Add your wallpapers here 👇
   - **Designer**: Dinesh Bhardwaj
   - **Category**: Tablet
 
+## 7. [Sudipta]_[Sudipta_Sunset].jpg 
+  - **Title**: Sunset view.  
+  - **Description**: A breathtaking blend of warm hues painting the sky as the sun gracefully dips below the horizon. 
+  - **Designer**: Sudipta Mandal.
+  - **Category**: Desktop
+
+## 8. [Sudipta]_[Sudipta_serenity].jpg 
+  - **Title**: Serenity of nature.  
+  - **Description**: A peaceful embrace of lush greenery, gentle breezes, and soothing whispers of nature’s harmony.  
+  - **Designer**: Sudipta Mandal.
+  - **Category**: Desktop
+
+## 9. [Sudipta]_[Sudipta_cityView].jpg 
+  - **Title**: City view.  
+  - **Description**: A stunning cityscape where modern high-rises reflect beautifully on the calm waters, bathed in the warm hues of a serene sunset.  
+  - **Designer**: Sudipta Mandal.
+  - **Category**: Tablet
+
+## 10. [Sudipta]_[Sudipta_geese].jpg 
+  - **Title**: Geese.  
+  - **Description**: Graceful geese glide effortlessly across the water, leaving gentle ripples in their wake.  
+  - **Designer**: Sudipta Mandal.
+  - **Category**: Tablet
+
+## 11. [Sudipta]_[Sudipta_butterfly].jpg 
+  - **Title**: Butterfly.  
+  - **Description**: A vibrant butterfly rests gently on blooming flowers, adding a touch of elegance to nature's beauty.  
+  - **Designer**: Sudipta Mandal.
+  - **Category**: Mobile
+
 
 
 WallGodds values creativity and collaboration. We can't wait to see your contributions! If you have any questions or need help, feel free to connect with our community on [Discord](https://discord.gg/kTQ5KWANp8).  

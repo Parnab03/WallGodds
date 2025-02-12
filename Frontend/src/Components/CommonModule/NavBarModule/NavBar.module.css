@@ -1,26 +1,36 @@
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: white;
     border-radius: 10px;
-    width: 1531px;
-    height: 88.46px;
-    margin-left: 36px;
-    margin-top: 10.77px;
+    width: 78%;
+    height: fit-content;
+    /* margin-left: 36px; */
     box-sizing: border-box;
-
 }
 
 .navbarWrapper {
     display: flex;
+    gap: 0.1em;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    height: fit-content;
+    z-index: 1;
+    position: fixed;
+    /* margin-top: 2px; */
+    top: 0.8em;
+    left: 0;
+    z-index: 1000;
 }
 
 .MainContainer {
     position: relative;
     height: 100%;
     display: flex;
+    justify-content: center;
+    gap: 1em;
     align-items: center;
     padding: 13px 20px;
     box-sizing: border-box;
@@ -47,58 +57,63 @@
 
 .navItems {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 61%;
+    width: 60%;
 }
 
 .menu {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    font-size: 1.3em;
+    font-size: 0.8em;
+    gap: 5em;
 }
 
 .menuItem {
-    margin: 0 55px;
     cursor: pointer;
     transition: color 0.3s;
 }
 
-.menuItem a {
+.menuLink {
     text-decoration: none;
     color: black;
+    font-size: 1.5em;
     font-weight: normal;
-    transition: color 0.3s, font-weight 0.3s;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-family: Comfortaa;
     position: relative;
 }
 
-.menuItem.active a {
-    font-weight: bold;
-    border-bottom: 3px solid black;
-}
-
-.menuItem.active a::after {
+.menuLink::after {
     content: "";
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
-    transition: height 0.3s;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    /* Fixed width for the underline */
+    height: 3px;
+    /* Height of the underline */
+    background-color: transparent;
+    /* Initially transparent */
+    transition: background-color 0.3s;
 }
 
-.menuItem:hover {
-    color: #61dafb;
+.menuLink.active::after {
+    border-radius: 10em;
+    background-color: black;
+    /* Underline appears when active */
 }
 
 .searchContainer {
     padding: 4px 2px;
-    width: 650px;
+    width: 40%;
     display: flex;
     align-items: center;
     opacity: 0.9;
@@ -144,38 +159,54 @@
 }
 
 .logoContainer {
-    margin-right: 20px;
-    padding-left: 3%;
+    margin-right: 1.2em;
     display: flex;
-    width: 206px;
-    height: 40px;
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
     padding: 0;
-    width: 200px;
-    margin-right: 6%;
+    width: 75%;
+    margin-right: 12%;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-    .menuItem {
-        margin: 0 30px;
+.logo:hover{
+    transform: scale(1.15);
+}
+
+@media (max-width: 1211px) {
+    .menu {
+        font-size: 0.6em;
+        gap: 3em;
     }
 
     .searchContainer {
         width: 500px;
     }
+
+    .logo{
+        width: 85%;
+        margin-right: 0.5%;
+    }
+
+    .searchContainer{
+        width: 39%;
+    }
 }
 
 @media (max-width: 992px) {
-    .navItems {
+    /* .navItems {
         width: 80%;
     }
 
     .menuItem {
         margin: 0 20px;
-    }
+    } */
 
     .searchContainer {
         width: 400px;
@@ -215,16 +246,4 @@
     .searchInput {
         padding: 8px;
     }
-}
-
-.menuLink {
-    text-decoration: none;
-    color: black;
-    font-weight: normal;
-    transition: color 0.3s, font-weight 0.3s;
-}
-
-.active {
-    font-weight: bold;
-    border-bottom: 3px solid black;
 }

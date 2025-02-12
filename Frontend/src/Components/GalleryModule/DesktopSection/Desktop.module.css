@@ -8,7 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-left: 5.5%;
-    margin-top: 0;
+    margin-top: 1000;
     overflow: visible;
     min-height: 100vh;
 }
@@ -16,6 +16,7 @@ body {
 .imgCards {
     display: flex;
     justify-content: space-around;
+    width: 99.5%;
     margin-bottom: 3%;
-    gap: 3.5%;
+    gap: 3%;
 }

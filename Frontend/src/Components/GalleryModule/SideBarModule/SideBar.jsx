@@ -51,7 +51,7 @@ const SideBar = () => {
                     </ul>
                 </div>
                 <div className={styles.copyright}>
-                    <p>@CopyRight</p>
+                    <p id="copyright">© WallGodds<small> 2025</small></p>
                 </div>
             </div>
         </div>
