@@ -1,0 +1,70 @@
+.imgCard {
+    width: 350px;
+    /* height: 480px; */
+    height: fit-content;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 1.5%;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottomBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    position: absolute;
+    margin: 1.5%;
+    justify-content: end;
+    align-items: center;
+    gap: 18px;
+    z-index:10;
+}
+
+.userInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.username {
+    font-size: 1vw;
+    color: #808080;
+}
+
+/* Optional hover effects */
+.icon{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    width: 28%;
+}
+
+.downloadBtn {
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    width: 43%;
+}
+
+.icon:hover,
+.downloadBtn:hover {
+    transform: scale(1.1);
+}

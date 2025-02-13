@@ -42,7 +42,7 @@ const Gallery = () => {
                         <Route path="mobile" element={<Mobile />} />
                         <Route path="tablet" element={<Tablet />} />
                         <Route path="desktop" element={<Desktop />} />
-                        <Route path="" element={<Navigate to="desktop" replace />} />
+                        <Route path="" element={<Navigate to="mobile" replace />} />
                     </Routes>
                 </div>
             </div>
