@@ -1,249 +1,311 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
-    width: 78%;
-    height: fit-content;
-    /* margin-left: 36px; */
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 10px;
+  width: 78%;
+  height: fit-content;
+  /* margin-left: 36px; */
+  box-sizing: border-box;
 }
 
 .navbarWrapper {
-    display: flex;
-    gap: 0.1em;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    z-index: 1;
-    position: fixed;
-    /* margin-top: 2px; */
-    top: 0.8em;
-    left: 0;
-    z-index: 1000;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  /* margin-top: 2px; */
+  top: 0.8em;
+  left: 0;
+  z-index: 1000;
 }
 
 .MainContainer {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    align-items: center;
-    padding: 13px 20px;
-    box-sizing: border-box;
-    width: 100%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .MainContainer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg,
-            rgba(0, 143, 255, 0.8),
-            rgba(255, 157, 0, 0.8),
-            rgba(217, 0, 0, 0.8),
-            rgba(151, 0, 136, 0.8));
-    border-radius: 10.053px;
-    z-index: -1;
-    padding: 1px;
-    margin: -1px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 143, 255, 0.8),
+    rgba(255, 157, 0, 0.8),
+    rgba(217, 0, 0, 0.8),
+    rgba(151, 0, 136, 0.8)
+  );
+  border-radius: 10.053px;
+  z-index: -1;
+  padding: 1px;
+  margin: -1px;
 }
 
 .navItems {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  gap: 3em;
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-    gap: 5em;
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  gap: 3em;
 }
 
 .menuItem {
-    cursor: pointer;
-    transition: color 0.3s;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .menuLink {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5em;
-    font-weight: normal;
-    margin-top: 8px;
-    padding-bottom: 8px;
-    display: inline-block;
-    font-family: Comfortaa;
-    position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+  font-weight: normal;
+  /* margin-top: 8px; */
+  padding-bottom: 6px;
+  display: inline-block;
+  font-family: Comfortaa;
+  position: relative;
 }
 
 .menuLink::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    /* Fixed width for the underline */
-    height: 3px;
-    /* Height of the underline */
-    background-color: transparent;
-    /* Initially transparent */
-    transition: background-color 0.3s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  /* Fixed width for the underline */
+  height: 3px;
+  /* Height of the underline */
+  background-color: transparent;
+  /* Initially transparent */
+  transition: background-color 0.3s;
 }
 
 .menuLink.active::after {
-    border-radius: 10em;
-    background-color: black;
-    /* Underline appears when active */
+  border-radius: 10px;
+  background-color: black;
+  /* Underline appears when active */
 }
 
 .searchContainer {
-    padding: 4px 2px;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    opacity: 0.9;
-    border: 1px solid #808080;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 10px;
+  padding: 4px 8px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  border: 1px solid #808080;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  flex-grow: 1;
 }
 
 .searchInput {
-    width: 96%;
-    padding: 5px;
-    border: none;
-    background: none;
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.1em;
-    font-style: normal;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background: none;
+  font-family: "Comfortaa", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-size: 1.1em;
+  /* font-style: normal; */
 }
 
 .searchInput:focus {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 .searchButton {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-right: 1.3%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 1.3%;
 }
 
 .profileContainer {
-    padding-left: 1%;
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
+  padding-left: 1%;
+  /* flex: 2; */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .profileButton {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .logoContainer {
-    margin-right: 1.2em;
-    display: flex;
-    width: 15%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+  margin-right: 1.2em;
+  display: flex;
+  width: 15%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    padding: 0;
-    width: 75%;
-    margin-right: 12%;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0;
+  width: 75%;
+  margin-right: 12%;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo:hover{
-    transform: scale(1.15);
+.logo:hover {
+  transform: scale(1.15);
+}
+
+@media (min-width: 1441px) {
+  .menu {
+    font-size: 1em;
+    gap: 1.5em;
+  }
+
+  .searchContainer {
+    width: 50%;
+  }
+
+  .logo {
+    width: 75%;
+    margin-right: 0.5%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .menu {
+    font-size: 0.9em;
+    margin-left: 0.5%;
+    gap: 1.5em;
+  }
+
+  .searchContainer {
+    width: 50%;
+  }
+
+  .logo {
+    width: 75%;
+    margin-right: 0.5%;
+  }
 }
 
 @media (max-width: 1211px) {
-    .menu {
-        font-size: 0.6em;
-        gap: 3em;
-    }
+  .menu {
+    font-size: 0.7em;
+    gap: 2em;
+  }
 
-    .searchContainer {
-        width: 500px;
-    }
+  .searchContainer {
+    width: 700px;
+  }
 
-    .logo{
-        width: 85%;
-        margin-right: 0.5%;
-    }
-
-    .searchContainer{
-        width: 39%;
-    }
+  .logo {
+    width: 75%;
+    margin-right: 0.5%;
+  }
 }
 
 @media (max-width: 992px) {
-    /* .navItems {
-        width: 80%;
-    }
+  .menu {
+    font-size: 0.9em;
+    gap: 1.5em;
+  }
 
-    .menuItem {
-        margin: 0 20px;
-    } */
-
-    .searchContainer {
-        width: 400px;
-    }
+  .searchContainer {
+    width: 400px;
+  }
 }
 
 @media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
+  .navbarWrapper {
+    width: 95%;
+  }
 
-    .menuItem {
-        margin: 10px 0;
-    }
+  .menu {
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .searchContainer {
-        width: 100%;
-    }
+  .menuItem {
+    margin: 10px 0;
+  }
 
-    .MainContainer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .menuLink {
+    font-size: 10px;
+  }
+
+  .menuLink.active::after {
+    width: 35px;
+  }
+
+  .navItems {
+    width: 100%;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  .searchContainer {
+    width: 40%;
+    margin-top: 8px;
+  }
+
+  .MainContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
 }
 
 @media (max-width: 576px) {
-    .menu {
-        font-size: 1em;
-    }
+  .menu {
+    font-size: 1em;
+  }
 
-    .searchContainer {
-        width: 100%;
-        padding: 8px;
-    }
+  .menuLink {
+    font-size: 7px;
+  }
 
-    .searchInput {
-        padding: 8px;
-    }
+  .menuLink.active::after {
+    width: 25px;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin: 8px;
+  }
+
+  .searchInput {
+    padding: 8px;
+  }
+
+  .logoContainer {
+    width: 75%;
+    margin-right: 0.5%;
+  }
 }
