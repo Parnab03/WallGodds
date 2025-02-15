@@ -4,6 +4,7 @@ import Logo from "/Logo.svg";
 import Search from "/SearchIcon.svg";
 import Profile from "/ProfileIcon.svg";
 import Style from "./NavBar.module.css";
+import ThemeToggle from "../../ThemeModule/ThemeToggle";
 
 const NavBar = () => {
     return (
@@ -74,6 +75,7 @@ const NavBar = () => {
                         <button className={Style.profileButton}>
                             <img src={Profile} alt="Profile" />
                         </button>
+                        <ThemeToggle />
                     </div>
                 </div>
             </nav>

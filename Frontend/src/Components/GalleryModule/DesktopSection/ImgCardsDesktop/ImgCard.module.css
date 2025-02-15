@@ -51,6 +51,10 @@
     color: #808080;
 }
 
+:global(.dark-theme) .username {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* Optional hover effects */
 .icon,
 .downloadBtn {
@@ -62,4 +66,5 @@
 .icon:hover,
 .downloadBtn:hover {
     transform: scale(1.1);
+    color: white;
 }

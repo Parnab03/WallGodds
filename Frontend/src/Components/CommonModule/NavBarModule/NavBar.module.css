@@ -150,6 +150,7 @@
     flex: 2;
     display: flex;
     justify-content: flex-end;
+    gap: 1rem;
 }
 
 .profileButton {
@@ -246,4 +247,33 @@
     .searchInput {
         padding: 8px;
     }
+}
+
+/* dark theme */
+:global(.dark-theme) .navbar {
+    background-color: rgb(32, 31, 31);
+}
+
+:global(.dark-theme) .menuItem a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+:global(.dark-theme) .searchContainer {
+    border: 1px solid white;
+}
+
+:global(.dark-theme) .searchInput {
+    color: white;
+}
+
+:global(.dark-theme) .menuLink.active::after {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+:global(.dark-theme) .MainContainer::before {
+    background: linear-gradient(45deg,
+    rgba(0, 86, 153, 0.8),     /* Darker blue */
+    rgba(204, 102, 0, 0.8),    /* Darker orange */
+    rgba(153, 0, 0, 0.8),      /* Darker red */
+    rgba(102, 0, 102, 0.8));
 }

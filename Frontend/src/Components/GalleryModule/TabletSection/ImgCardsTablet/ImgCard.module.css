@@ -51,6 +51,10 @@
     color: #808080;
 }
 
+:global(.dark-theme) .username {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* Optional hover effects */
 .icon{
     transition: transform 0.2s ease;
