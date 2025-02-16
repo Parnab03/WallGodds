@@ -70,8 +70,8 @@ body[data-theme="dark"] {
 
 ._logo_9pmj5_35 {
     padding: 4;
-    width: 160px;
-    margin-right: 10px;
+    width: 12%;
+    margin-right: 15px;
     cursor: pointer
 }
 
@@ -411,7 +411,8 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
     gap: 20px;
-    padding: 20px;
+    padding: 33px;
+
 }
 
 .wallpaper-card {
