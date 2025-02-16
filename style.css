@@ -355,10 +355,10 @@ body[data-theme="dark"] {
 /* Categories */
 .categories {
     position: fixed;
-    left: 0;
-    right:5;
+    left: 10px;
+    right:1px;
     top: 65px;
-    bottom: 0px;
+    bottom: 1px;
     width: 10rem;
     background: linear-gradient(45deg,#388fd300,#ff9d0030,#d9000000,#9700881f);
     display: flex;
@@ -367,6 +367,8 @@ body[data-theme="dark"] {
     align-items: center;
     border-bottom-right-radius:10px;
     border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-top-left-radius:10px;
 }
 
 .category-buttons {
@@ -403,7 +405,8 @@ main {
     margin-left: 12rem;
     padding: 2rem;
     max-width: 1280px;
-    margin-right: auto;
+    margin-right: 0px;
+    margin-left:150px;
 }
 
 
