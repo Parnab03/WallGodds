@@ -8,7 +8,7 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --navbar-bg: #ffffffcc;
+    --navbar-bg: #ffffffcc; /* Light mode navbar background */
     --card-bg: #ffffff;
     --card-shadow: rgba(0, 0, 0, 0.2);
     --border-color: #e5e7eb;
@@ -19,7 +19,7 @@
 [data-theme="dark"] {
     --background-color: #1a1a1a;
     --text-color: #ffffff;
-    --navbar-bg: #1a1a1acc;
+    --navbar-bg: #1e3a8acc; /* Dark blue for navbar in dark mode */
     --card-bg: #2d2d2d;
     --card-shadow: rgba(255, 255, 255, 0.1);
     --border-color: #444444;
@@ -47,12 +47,13 @@ body[data-theme="dark"] {
     background-image: url('Frontend/public/BACKGROUND-DARK.svg');
 }
 
+/* Navbar styles */
 ._navbar_5pxw7_1 {
     width: 85%;
     display: flex;
     align-items: center;
     margin: 0;
-    background-color: #ffffffcc;
+    background-color: var(--navbar-bg); /* Use CSS variable for navbar background */
     border-radius: 10px;
 }
 
