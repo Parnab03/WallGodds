@@ -123,7 +123,7 @@ body[data-theme="dark"] {
 
 /* Underline effect for active menu item */
 ._menuItem_5pxw7_56.active {
-    color: #000000; /* Make text color transparent so the gradient underline stands out */
+    color: var(--text-color); /* Use CSS variable for text color */
 }
 
 ._menuItem_5pxw7_56.active::after {
@@ -135,7 +135,7 @@ body[data-theme="dark"] {
     height: 2px; /* Thickness of the underline */
     background: linear-gradient(45deg, #388fd361, #ff9d006e, #d9000061, #97008869); /* Gradient underline */
     transition: width 0.3s ease, background 0.3s ease;
-    border-radius:600px;
+    border-radius: 600px;
 }
 
 /* Optional: Adding a hover effect on other menu items */
@@ -414,7 +414,8 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
     gap: 20px;
-    padding: 33px;
+    padding: 40px;
+    padding-top:50px;
 
 }
 
