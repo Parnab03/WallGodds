@@ -259,12 +259,12 @@ body[data-theme="dark"] {
 
 /* Navigation */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2px);
-  border: 1px solid #f3f4f6;
+  background-color: rgb(255 255 255 / 0%);
+  backdrop-filter: blur(0px);
+  border: 1px solid #f3f4f600;
   border-bottom-right-radius:10px;
 }
 
@@ -273,7 +273,7 @@ body[data-theme="dark"] {
   align-items: center;
   height: 64px;
   padding: 0 10px;
-  background: linear-gradient(45deg,#9700881f,#d9000000,#ff9d0030,#388fd300);
+  background: linear-gradient(45deg,#97008800,#d9000000,#ff9d0030,#388fd300);
   
 }
 
