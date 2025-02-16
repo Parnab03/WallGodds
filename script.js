@@ -29,7 +29,7 @@ themeToggleBtn.addEventListener('click', () => {
 
 // Function to update the theme toggle button icon
 function updateThemeIcon(theme) {
-    const iconPath = theme === 'light' ? 'Frontend/public/DarkModeIcon.svg' : 'Frontend/public/LightModeIcon.svg';
+    const iconPath = theme === 'light' ? 'Frontend/public/darkicon.png' : 'Frontend/public/LightIcon.svg';
     themeToggleBtn.querySelector('img').src = iconPath;
 }
 
