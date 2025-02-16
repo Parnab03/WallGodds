@@ -1,12 +1,13 @@
 .imageContainer {
     position: relative; 
     display: inline-block;
-    width: 100%; 
+    width: 12vw; 
     overflow: hidden;
     border-radius: 10px;
 }
 
 .image {
+    position: relative;
     display: block;
     width: 100%;
     height: auto;
@@ -16,18 +17,25 @@
 .icons {
     display: flex;
     position: absolute;
-    margin: 0.9%;
-    justify-content: end;
+    margin: 1%;
+    margin-left: 1.6%;
     align-items: center;
-    gap: 7vw;
+    justify-content: space-between;
     opacity: 50%;
     z-index: 10;
+    width: 12%;
 }
 
-.heart, .save {
+.save {
     transition: transform 0.2s ease;
     cursor: pointer;
-    width: 1.8vw;
+    width: 1.6vw;
+}
+
+.heart{
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    width: 1.45vw;
 }
 
 .downloadBtn {
@@ -42,26 +50,27 @@
 
 .bottomBar {
     width: 100%;
-    height: 36px;
+    /* height: 36px; */
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.userInfo {
+/* .userInfo {
     display: flex;
     position: relative;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .username {
     position: absolute;
     bottom: 10px;
     left: 10px;
     z-index: 10;
-    font-size: 0.9vw; 
+    font-size: 0.85vw; 
     color: #808080;
 }
 

@@ -28,6 +28,20 @@ const Mobile = () => {
                 <ImgCard imageSrc={img9} />
                 <ImgCard imageSrc={img10} />
             </div>
+            <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img1} />
+                <ImgCard imageSrc={img2} />
+                <ImgCard imageSrc={img3} />
+                <ImgCard imageSrc={img4} />
+                <ImgCard imageSrc={img5} />
+            </div>
+            <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img6} />
+                <ImgCard imageSrc={img7} />
+                <ImgCard imageSrc={img8} />
+                <ImgCard imageSrc={img9} />
+                <ImgCard imageSrc={img10} />
+            </div>
             
         </div>
 

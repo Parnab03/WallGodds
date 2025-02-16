@@ -62,3 +62,9 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+@media (min-width: 1560px) {
+    .galleryContent{
+        margin-left: 23.75%;
+    }
+}
