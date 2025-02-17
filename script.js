@@ -52,13 +52,52 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    document.querySelectorAll(".save-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            this.classList.toggle("saved");
-            this.innerHTML = this.classList.contains("saved") ? "📌" : "🔖";
-        });
-    });
+// Save Button Animation
+var btn = document.querySelector(".btn");
+var t = new TimelineMax({ paused: true });
 
+t.to(".icon-container.second-icon", 0.8, {
+    transform: "rotateX(0deg)",
+    ease: Bounce.easeOut
+});
+
+function bookmark() {
+    // Toggle the active class
+    btn.classList.toggle("active");
+
+    // Play or reverse the animation
+    t.reversed(!t.reversed());
+    if (t.reversed()) {
+        t.reverse();
+    } else {
+        t.play();
+    }
+}
+
+
+
+// Function to update the download button icon based on the theme
+function updateDownloadButtonIcon(theme) {
+    const downloadButtons = document.querySelectorAll('.download-btn .download-icon');
+    downloadButtons.forEach(button => {
+        const iconPath = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
+        button.src = iconPath;
+    });
+}
+
+// Update download button icons when the theme changes
+themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    updateDownloadButtonIcon(newTheme); // Update download button icons
+});
+
+// Initial setup for download button icons
+const savedTheme = localStorage.getItem('theme') || 'light';
+updateDownloadButtonIcon(savedTheme);
+
+// Download functionality
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".download-btn").forEach(button => {
         button.addEventListener("click", function () {
             const imageUrl = this.getAttribute("data-img");
@@ -71,3 +110,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
