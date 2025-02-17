@@ -91,11 +91,15 @@ document.querySelectorAll(".like-btn").forEach(button => {
 document.querySelectorAll(".download-btn").forEach(button => {
     button.addEventListener("click", function () {
         const imageUrl = this.getAttribute("data-img");
-        const link = document.createElement("a");
-        link.href = imageUrl;
-        link.download = imageUrl;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        if (imageUrl) {
+            const link = document.createElement("a");
+            link.href = imageUrl;
+            link.download = imageUrl.split('/').pop(); // Extract filename for download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            console.error("No image URL found for download.");
+        }
     });
 });
