@@ -1,105 +1,78 @@
 // Initialize Lucide icons
 lucide.createIcons();
 
-let currentCategory = 'desktop';
-
-// DOM elements
-const wallpaperGrid = document.querySelector('.wallpaper-grid');
-const categoryButtons = document.querySelectorAll('.category-btn');
+// Theme Toggle Logic
 const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
-const logo = document.querySelector('._logo_9pmj5_35'); // Select the logo element
+const logo = document.querySelector('._logo_9pmj5_35');
 
-// Check for saved theme in localStorage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-    updateLogo(savedTheme); // Update logo based on saved theme
-    updateDownloadButtonIcon(savedTheme); // Update download button icons based on saved theme
-} else {
-    body.setAttribute('data-theme', 'light'); // Default to light mode
-    updateLogo('light'); // Set default logo for light mode
-    updateDownloadButtonIcon('light'); // Set default download button icons for light mode
-}
+// Check saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+updateLogo(savedTheme);
+updateDownloadButtonIcon(savedTheme);
 
-// Theme toggle functionality
+// Theme toggle event
 themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    const newTheme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
-    updateLogo(newTheme); // Update logo when theme changes
-    updateDownloadButtonIcon(newTheme); // Update download button icons when theme changes
+    updateLogo(newTheme);
+    updateDownloadButtonIcon(newTheme);
 });
 
-// Function to update the theme toggle button icon
+// Update theme icon
 function updateThemeIcon(theme) {
     const iconPath = theme === 'light' ? 'Frontend/public/DarkIcon.svg' : 'Frontend/public/LightIcon.svg';
     themeToggleBtn.querySelector('img').src = iconPath;
 }
 
-// Function to update the logo based on the theme
+// Update logo
 function updateLogo(theme) {
-    const logoPath = theme === 'light' ? 'Frontend/public/Logo.svg' : 'Frontend/public/Logo-white.svg';
-    logo.src = logoPath;
+    logo.src = theme === 'light' ? 'Frontend/public/Logo.svg' : 'Frontend/public/Logo-white.svg';
 }
 
-// Function to update the download button icon based on the theme
+// Update download button icons
 function updateDownloadButtonIcon(theme) {
-    const downloadButtons = document.querySelectorAll('.download-btn .download-icon');
-    downloadButtons.forEach(button => {
-        const iconPath = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
-        button.src = iconPath;
+    document.querySelectorAll('.download-icon').forEach(icon => {
+        icon.src = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
     });
 }
 
-// Save Button Animation
-const saveButtons = document.querySelectorAll('.btn');
-saveButtons.forEach(btn => {
-    const t = new TimelineMax({ paused: true });
-
-    t.to(btn.querySelector(".icon-container.second-icon"), 0.8, {
-        transform: "rotateX(0deg)",
-        ease: Bounce.easeOut
-    });
-
-    btn.addEventListener('click', () => {
-        // Toggle the active class
-        btn.classList.toggle("active");
-
-        // Play or reverse the animation
-        t.reversed(!t.reversed());
-        if (t.reversed()) {
-            t.reverse();
-        } else {
-            t.play();
-        }
+// Like Button Functionality
+document.querySelectorAll('.like-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        this.classList.toggle('liked');
+        this.innerHTML = this.classList.contains('liked') ? '❤️' : '🤍';
     });
 });
 
-// Like Button Functionality
-document.querySelectorAll(".like-btn").forEach(button => {
-    button.addEventListener("click", function () {
-        this.classList.toggle("liked");
-        this.innerHTML = this.classList.contains("liked") ? "❤️" : "🤍";
+// Save Button Animation
+document.querySelectorAll('.btn').forEach(btn => {
+    const t = gsap.timeline({ paused: true });
+    t.to(btn.querySelector('.icon-container.second-icon'), {
+        duration: 0.8,
+        rotationX: 0,
+        ease: "bounce.out"
+    });
+
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        t.reversed() ? t.play() : t.reverse();
     });
 });
 
 // Download Button Functionality
-document.querySelectorAll(".download-btn").forEach(button => {
-    button.addEventListener("click", function () {
-        const imageUrl = this.getAttribute("data-img");
-        if (imageUrl) {
-            const link = document.createElement("a");
-            link.href = imageUrl;
-            link.download = imageUrl.split('/').pop(); // Extract filename for download
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } else {
-            console.error("No image URL found for download.");
-        }
+document.querySelectorAll('.download-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const imageUrl = this.getAttribute('data-img');
+        const link = document.createElement('a');
+        link.href = imageUrl;
+        link.download = imageUrl.split('/').pop(); // Extract filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     });
 });
