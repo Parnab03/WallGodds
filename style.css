@@ -434,24 +434,41 @@ main {
 
 .wallpaper-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
+/* Wallpaper Info Styles */
 .wallpaper-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between left and right sections */
     padding: 10px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgb(255 255 255 / 0%);
 }
 
-.like-btn, .save-btn, .download-btn {
+/* Left Section (Like and Save Buttons) */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between like and save buttons */
+}
+
+/* Right Section (Username and Download Button) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between username and download button */
+}
+
+
+/* Like and Save Buttons */
+.like-btn, .save-btn {
     background: none;
     border: none;
     font-size: 16px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 5px;
 }
 
 /* Like Button: Default state */
@@ -478,9 +495,94 @@ main {
 
 /* Download Button */
 .download-btn {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 5px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-icon {
+    width: px; /* Adjust size as needed */
+    height: px; /* Adjust size as needed */
+    transition: opacity 0.3s ease;
+}
+
+.download-btn:hover .download-icon {
+    opacity: 0.8; /* Add hover effect */
+}
+
+/* Save Button Styles */
+.btn {
+    position: relative;
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    border: 2px solid #808080; /* Gray outer border */
+    outline: none;
+    background: transparent; /* Transparent background */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    perspective: 1000px;
+    overflow: hidden;
+    transition: background 250ms ease, box-shadow 250ms ease;
+    transform-style: preserve-3d;
+}
+
+.btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.btn .bookmark {
+    opacity: 1;
+    fill: #808080; /* Gray color for the bookmark icon */
+    fill-opacity: 1;
+    stroke: #808080; /* Gray color for the bookmark icon */
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    paint-order: normal;
+    transition: fill 250ms ease, stroke 250ms ease;
+}
+
+.btn .icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn .icon-container.second-icon {
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+.btn .icon-container.second-icon svg .bookmark {
+    fill: #000;
+    stroke: #000;
+    stroke-width: 5px;
+}
+
+/* Active state (when clicked) */
+.btn.active {
+    background: #808080; /* Fill with gray color */
+}
+
+.btn.active .bookmark {
+    fill: #fff; /* White color for the bookmark icon */
+    stroke: #fff; /* White color for the bookmark icon */
+}
+
+.btn:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 /* Footer */
