@@ -444,7 +444,7 @@ main {
     align-items: center;
     justify-content: space-between; /* Space between left and right sections */
     padding: 10px;
-    background: rgb(255 255 255 / 0%);
+    background: rgba(255, 255, 255, 0); /* Transparent background */
 }
 
 /* Left Section (Like and Save Buttons) */
@@ -461,60 +461,23 @@ main {
     gap: 10px; /* Space between username and download button */
 }
 
-
-/* Like and Save Buttons */
-.like-btn, .save-btn {
+/* Like Button */
+.like-btn {
     background: none;
     border: none;
     font-size: 16px;
     cursor: pointer;
     padding: 5px;
-}
-
-/* Like Button: Default state */
-.like-btn {
-    color: grey;
+    color: grey; /* Default color */
     transition: color 0.3s ease;
 }
 
 /* Like Button: When clicked */
 .like-btn.liked {
-    color: red;
+    color: red; /* Liked color */
 }
 
-/* Save Button: Default state */
-.save-btn {
-    color: grey;
-    transition: color 0.3s ease;
-}
-
-/* Save Button: When clicked */
-.save-btn.saved {
-    color: blue;
-}
-
-/* Download Button */
-.download-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.download-icon {
-    width: px; /* Adjust size as needed */
-    height: px; /* Adjust size as needed */
-    transition: opacity 0.3s ease;
-}
-
-.download-btn:hover .download-icon {
-    opacity: 0.8; /* Add hover effect */
-}
-
-/* Save Button Styles */
+/* Save Button */
 .btn {
     position: relative;
     width: 40px; /* Adjusted size */
@@ -584,6 +547,28 @@ main {
 .btn:active {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
+
+/* Download Button */
+.download-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-icon {
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
+    transition: opacity 0.3s ease;
+}
+
+.download-btn:hover .download-icon {
+    opacity: 0.8; /* Add hover effect */
+}
+
 
 /* Footer */
 footer {
