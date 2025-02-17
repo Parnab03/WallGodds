@@ -65,12 +65,15 @@ document.querySelectorAll('.btn').forEach(btn => {
 });
 
 // Download Button Functionality
-document.querySelectorAll('.download-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const imageUrl = this.getAttribute('data-img');
-        const link = document.createElement('a');
-        link.href = imageUrl;
-        link.download = imageUrl.split('/').pop(); // Extract filename
+document.querySelectorAll(".download-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        const imagePath = this.getAttribute("data-img"); // e.g., "Wallpapers/wel1.png"
+        const fileName = imagePath.split('/').pop(); // Extracts "wel1.png"
+        
+        // Create a temporary link
+        const link = document.createElement("a");
+        link.href = imagePath; 
+        link.download = fileName; // Forces download with this filename
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
