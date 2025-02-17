@@ -16,9 +16,11 @@ if (savedTheme) {
     body.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
     updateLogo(savedTheme); // Update logo based on saved theme
+    updateDownloadButtonIcon(savedTheme); // Update download button icons based on saved theme
 } else {
     body.setAttribute('data-theme', 'light'); // Default to light mode
     updateLogo('light'); // Set default logo for light mode
+    updateDownloadButtonIcon('light'); // Set default download button icons for light mode
 }
 
 // Theme toggle functionality
@@ -29,6 +31,7 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
     updateLogo(newTheme); // Update logo when theme changes
+    updateDownloadButtonIcon(newTheme); // Update download button icons when theme changes
 });
 
 // Function to update the theme toggle button icon
@@ -43,39 +46,6 @@ function updateLogo(theme) {
     logo.src = logoPath;
 }
 
-// Existing functionality for like, save, and download buttons
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".like-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            this.classList.toggle("liked");
-            this.innerHTML = this.classList.contains("liked") ? "❤️" : "🤍";
-        });
-    });
-
-// Save Button Animation
-var btn = document.querySelector(".btn");
-var t = new TimelineMax({ paused: true });
-
-t.to(".icon-container.second-icon", 0.8, {
-    transform: "rotateX(0deg)",
-    ease: Bounce.easeOut
-});
-
-function bookmark() {
-    // Toggle the active class
-    btn.classList.toggle("active");
-
-    // Play or reverse the animation
-    t.reversed(!t.reversed());
-    if (t.reversed()) {
-        t.reverse();
-    } else {
-        t.play();
-    }
-}
-
-
-
 // Function to update the download button icon based on the theme
 function updateDownloadButtonIcon(theme) {
     const downloadButtons = document.querySelectorAll('.download-btn .download-icon');
@@ -85,29 +55,47 @@ function updateDownloadButtonIcon(theme) {
     });
 }
 
-// Update download button icons when the theme changes
-themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    updateDownloadButtonIcon(newTheme); // Update download button icons
-});
+// Save Button Animation
+const saveButtons = document.querySelectorAll('.btn');
+saveButtons.forEach(btn => {
+    const t = new TimelineMax({ paused: true });
 
-// Initial setup for download button icons
-const savedTheme = localStorage.getItem('theme') || 'light';
-updateDownloadButtonIcon(savedTheme);
+    t.to(btn.querySelector(".icon-container.second-icon"), 0.8, {
+        transform: "rotateX(0deg)",
+        ease: Bounce.easeOut
+    });
 
-// Download functionality
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".download-btn").forEach(button => {
-        button.addEventListener("click", function () {
-            const imageUrl = this.getAttribute("data-img");
-            const link = document.createElement("a");
-            link.href = imageUrl;
-            link.download = imageUrl;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
+    btn.addEventListener('click', () => {
+        // Toggle the active class
+        btn.classList.toggle("active");
+
+        // Play or reverse the animation
+        t.reversed(!t.reversed());
+        if (t.reversed()) {
+            t.reverse();
+        } else {
+            t.play();
+        }
     });
 });
 
+// Like Button Functionality
+document.querySelectorAll(".like-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        this.classList.toggle("liked");
+        this.innerHTML = this.classList.contains("liked") ? "❤️" : "🤍";
+    });
+});
+
+// Download Button Functionality
+document.querySelectorAll(".download-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        const imageUrl = this.getAttribute("data-img");
+        const link = document.createElement("a");
+        link.href = imageUrl;
+        link.download = imageUrl;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
