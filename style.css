@@ -560,13 +560,13 @@ main {
 }
 
 .download-icon {
-    width: 24px; /* Set width */
-    height: 24px; /* Set height */
+    width: px; /* Set width */
+    height: px; /* Set height */
     transition: opacity 0.3s ease;
 }
 
 .download-btn:hover .download-icon {
-    opacity: 0.8; /* Add hover effect */
+    opacity: 1; /* Add hover effect */
 }
 
 
