@@ -513,7 +513,7 @@ main {
 
 .btn .bookmark {
     opacity: 1;
-    fill: #808080; /* Gray color for the bookmark icon */
+    fill: #3e9eeb; /* Gray color for the bookmark icon */
     fill-opacity: 1;
     stroke: #808080; /* Gray color for the bookmark icon */
     stroke-width: 3px;
