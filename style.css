@@ -63,7 +63,7 @@ body[data-theme="dark"] {
     height:50px;
     display: flex;
     align-items: center;
-    padding: 13px 20px;
+    padding: 0px 0px;
     box-sizing: border-box;
     margin: 0
 }
@@ -86,14 +86,15 @@ body[data-theme="dark"] {
     border-radius: 10px;
     z-index: -1;
     padding: 1px;
-    margin: -1px
+    margin: -1px;
 }
 
 ._navItems_5pxw7_40 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 61%
+    width: 60%;
+    left:5px;
 }
 
 ._menu_5pxw7_47 {
@@ -102,7 +103,8 @@ body[data-theme="dark"] {
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-size: 1.3em
+    font-size: 1.2em;
+    width: 100%;
 }
 
 ._menuItem_5pxw7_56 {
@@ -130,6 +132,7 @@ body[data-theme="dark"] {
     content: '';
     position: absolute;
     bottom: 0;
+    top:30px;
     left: 0;
     width: 100%;
     height: 2px; /* Thickness of the underline */
@@ -185,16 +188,17 @@ body[data-theme="dark"] {
 }
 
 ._profileContainer_5pxw7_100 {
-    padding-left: 1%;
+    padding-left: 5px;
     flex: 2;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    
 }
 
 ._profileButton_5pxw7_107 {
     background: none;
     border: none;
-    cursor: pointer
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -604,7 +608,8 @@ footer {
 
 /* new styles for theme toggle button */
 .theme-toggle-container {
-    padding-left: 1%;
+    padding-left: 0px;
+    padding-right:5px;
     display: flex;
     align-items: center;
 }
@@ -616,6 +621,6 @@ footer {
 }
 
 .theme-toggle-btn img {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
