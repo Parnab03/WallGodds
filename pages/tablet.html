@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WallGodds - Wallpaper Website</title>
-    <link rel="stylesheet" href="../pages/tablet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <!-- Navigation -->
     <header class="site-header">
         <div class="header-container">
-            <img class="_logo_9pmj5_35" src="../Frontend/public/Logo.svg" alt="Logo">
+            <img class="_logo_9pmj5_35" src="Frontend/public/Logo.svg" alt="Logo">
             <nav class="_navbar_5pxw7_1">
                 <div class="_MainContainer_5pxw7_10">
                     <div class="_navItems_5pxw7_40">
@@ -24,12 +25,17 @@
                     <div class="_searchContainer_5pxw7_66">
                         <input class="_searchInput_5pxw7_77" type="text" placeholder="Search your wallpaper" fdprocessedid="inw40f">
                         <button class="_searchButton_5pxw7_93" fdprocessedid="l0umv">
-                            <img src="../Frontend/public/SearchIcon.svg" alt="Search">
+                            <img src="Frontend/public/SearchIcon.svg" alt="Search">
                         </button>
                     </div>
                     <div class="_profileContainer_5pxw7_100">
                         <button class="_profileButton_5pxw7_107" fdprocessedid="ju6e5o">
-                            <img src="../Frontend/public/ProfileIcon.svg" alt="Profile">
+                            <img src="Frontend/public/ProfileIcon.svg" alt="Profile">
+                        </button>
+                    </div>
+                    <div class="theme-toggle-container">
+                        <button class="theme-toggle-btn" id="theme-toggle" fdprocessedid="theme-toggle">
+                            <img src="Frontend/public/DarkModeIcon.svg" alt="Toggle Theme">
                         </button>
                     </div>
                 </div>
@@ -40,15 +46,16 @@
     <!-- Categories -->
     <div class="categories">
         <div class="category-buttons">
-            <button class="category-btn" data-category="mobile" onclick="window.location.href='mobile.html'" fdprocessedid="zswblf">Mobile</button>
-            <button class="category-btn active" data-category="tablet" onclick="window.location.href='tablet.html'" fdprocessedid="jc62tu">Tablet</button>
-            <button class="category-btn" data-category="desktop" onclick="window.location.href='../index.html'" fdprocessedid="6zttkd">Desktop</button>
+            <button class="category-btn" data-category="mobile" onclick="window.location.href='pages/mobile.html'" fdprocessedid="zswblf">Mobile</button>
+             <button class="category-btn" data-category="tablet" onclick="window.location.href='pages/tablet.html'" fdprocessedid="jc62tu">Tablet</button>
+            <button class="category-btn active" data-category="desktop" onclick="window.location.href='../index.html'" fdprocessedid="6zttkd">Desktop</button>
         </div>
         <div class="_copyright_9pmj5_65"><p>@CopyRight</p></div>
     </div>
 
-    <!-- Wallpaper Grid (Desktop Content) -->
-    <main>
+    <!-- Wallpaper Grid (Tablet Content) -->
+
+     <main>
         <!-- ... (keep your existing desktop wallpaper grid content) ... -->
      <div class="wallpaper-gallery">
         <!-- Wallpaper Card 1 -->
@@ -152,8 +159,12 @@
     </div>
     </main>
 
+   
+
     <footer></footer>
-    <script src="../pages/tablet.js"></script>
+ 
+    <script src="script.js"></script>
+    <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
 
 
 
