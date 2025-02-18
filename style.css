@@ -548,6 +548,11 @@ main {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
+._username_1c1da_49 {
+    font-size: 1vw;
+    color: gray
+}
+
 /* Download Button */
 .download-btn {
     background: none;
