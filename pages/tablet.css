@@ -5,22 +5,55 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #ffffffcc; /* Light mode navbar background */
+    --card-bg: #ffffff;
+    --card-shadow: rgba(0, 0, 0, 0.2);
+    --border-color: #e5e7eb;
+    --button-bg: rgba(0, 0, 0, 0.1);
+    --button-color: #000000;
+}
+
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --navbar-bg: #1e3a8acc; /* Dark blue for navbar in dark mode */
+    --card-bg: #2d2d2d;
+    --card-shadow: rgba(255, 255, 255, 0.1);
+    --border-color: #444444;
+    --button-bg: rgba(255, 255, 255, 0.1);
+    --button-color: #ffffff;
+}
+
 body {
     min-height: 100vh;
-    background-image: url('../Frontend/public/BACKGROUND.svg');
     background-size: cover;
     background-position: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Light mode background image */
+body[data-theme="light"] {
+    background-image: url('Frontend/public/BACKGROUND.svg');
+}
 
+/* Dark mode background image */
+body[data-theme="dark"] {
+    background-image: url('Frontend/public/BACKGROUND-DARK.svg');
+}
 
+/* Navbar styles */
 ._navbar_5pxw7_1 {
     width: 85%;
     display: flex;
     align-items: center;
     margin: 0;
-    background-color: #ffffffcc;
+    background-color: var(--navbar-bg); /* Use CSS variable for navbar background */
     border-radius: 10px;
 }
 
@@ -30,15 +63,15 @@ body {
     height:50px;
     display: flex;
     align-items: center;
-    padding: 13px 20px;
+    padding: 0px 0px;
     box-sizing: border-box;
     margin: 0
 }
 
 ._logo_9pmj5_35 {
     padding: 4;
-    width: 160px;
-    margin-right: 10px;
+    width: 12%;
+    margin-right: 15px;
     cursor: pointer
 }
 
@@ -53,14 +86,15 @@ body {
     border-radius: 10px;
     z-index: -1;
     padding: 1px;
-    margin: -1px
+    margin: -1px;
 }
 
 ._navItems_5pxw7_40 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 61%
+    width: 60%;
+    left:5px;
 }
 
 ._menu_5pxw7_47 {
@@ -69,7 +103,8 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-size: 1.3em
+    font-size: 1.2em;
+    width: 100%;
 }
 
 ._menuItem_5pxw7_56 {
@@ -90,19 +125,20 @@ body {
 
 /* Underline effect for active menu item */
 ._menuItem_5pxw7_56.active {
-    color: #000000; /* Make text color transparent so the gradient underline stands out */
+    color: var(--text-color); /* Use CSS variable for text color */
 }
 
 ._menuItem_5pxw7_56.active::after {
     content: '';
     position: absolute;
     bottom: 0;
+    top:30px;
     left: 0;
     width: 100%;
     height: 2px; /* Thickness of the underline */
     background: linear-gradient(45deg, #388fd361, #ff9d006e, #d9000061, #97008869); /* Gradient underline */
     transition: width 0.3s ease, background 0.3s ease;
-    border-radius:600px;
+    border-radius: 600px;
 }
 
 /* Optional: Adding a hover effect on other menu items */
@@ -152,16 +188,17 @@ body {
 }
 
 ._profileContainer_5pxw7_100 {
-    padding-left: 1%;
+    padding-left: 5px;
     flex: 2;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    
 }
 
 ._profileButton_5pxw7_107 {
     background: none;
     border: none;
-    cursor: pointer
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -226,12 +263,12 @@ body {
 
 /* Navigation */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 50;
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(2px);
-  border: 1px solid #f3f4f6;
+  background-color: rgb(255 255 255 / 0%);
+  backdrop-filter: blur(0px);
+  border: 1px solid #f3f4f600;
   border-bottom-right-radius:10px;
 }
 
@@ -240,7 +277,7 @@ body {
   align-items: center;
   height: 64px;
   padding: 0 10px;
-  background: linear-gradient(45deg,#9700881f,#d9000000,#ff9d0030,#388fd300);
+  background: linear-gradient(45deg,#97008800,#d9000000,#ff9d0030,#388fd300);
   
 }
 
@@ -322,10 +359,10 @@ body {
 /* Categories */
 .categories {
     position: fixed;
-    left: 0;
-    right:5;
+    left: 10px;
+    right:1px;
     top: 65px;
-    bottom: 0px;
+    bottom: 1px;
     width: 10rem;
     background: linear-gradient(45deg,#388fd300,#ff9d0030,#d9000000,#9700881f);
     display: flex;
@@ -334,6 +371,8 @@ body {
     align-items: center;
     border-bottom-right-radius:10px;
     border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-top-left-radius:10px;
 }
 
 .category-buttons {
@@ -365,115 +404,195 @@ body {
     font-weight: 500;
 }
 
-.wallpaper-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 2 equal-width columns */
-    gap: 20px;
-    padding: 20px;
-}
 /* Main content */
 main {
     margin-left: 12rem;
     padding: 2rem;
     max-width: 1280px;
-    margin-right: auto;
+    margin-right: 0px;
+    margin-left:150px;
+}
+
+
+/* Wallpaper Gallery Layout */
+.wallpaper-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between columns */
+    padding: 40px;
+    padding-top: 50px;
+}
+
+/* Wallpaper Column */
+.wallpaper-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between wallpaper cards */
 }
 
 /* Wallpaper Card */
 .wallpaper-card {
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
     overflow: hidden;
-    width: 280px;
-    text-align: center;
-    padding-bottom: 10px;
-    grid-template-columns: repeat(3, 1fr); /* Creates 2 equal-width columns */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-/* Image Container */
-.image-container {
-    position: relative;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+.wallpaper-card:hover {
+    transform: translateY(-5px);
 }
 
-.image-container img {
+.wallpaper-card img {
     width: 100%;
+    height: auto;
     display: block;
-    border-radius: 16px;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
 }
 
-/* Top Right Buttons (Save & Like) */
-.top-right-buttons {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 8px;
-}
-
-.top-right-buttons .like-btn,
-.top-right-buttons .save-btn {
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 50%;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Wallpaper Info */
+/* Wallpaper Info Styles */
 .wallpaper-info {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Space between left and right sections */
     padding: 10px;
-    font-size: 14px;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
 }
 
-.like-btn, .save-btn, .download-btn {
+/* Left Section (Like and Save Buttons) */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between like and save buttons */
+}
+
+/* Right Section (Username and Download Button) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between username and download button */
+}
+
+/* Like Button */
+.like-btn {
     background: none;
-    border: none;
+    border: 2px solid #ff1493; /* Deep pink border */
+    border-radius: 50%; /* Circular shape */
     font-size: 16px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 8px; /* Adjusted padding for circular shape */
+    color: #ff1493; /* Pink heart initially */
+    transition: all 0.3s ease;
+    width: 40px; /* Match save button size */
+    height: 40px; /* Match save button size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* Like and Save Button Effects */
-.like-btn {
-    color: grey;
-}
-
+/* Like Button: When clicked */
 .like-btn.liked {
-    color: red;
+    background-color: #ff69b4; /* Light pink fill */
+    border-color: #ff69b4; /* Match border to fill color */
+    color: white; /* White heart when filled */
 }
 
-.save-btn {
-    color: grey;
+/* Save Button */
+.btn {
+    position: relative;
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Adjusted size */
+    border: 2px solid #3e9eeb; /* Gray outer border */
+    outline: none;
+    background: transparent; /* Transparent background */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    perspective: 1000px;
+    overflow: hidden;
+    transition: background 250ms ease, box-shadow 250ms ease;
+    transform-style: preserve-3d;
 }
 
-.save-btn.saved {
-    color: blue;
+.btn svg {
+    width: 100%;
+    height: 100%;
 }
 
+.btn .bookmark {
+    opacity: 1;
+    fill: #3e9eeb; /* Gray color for the bookmark icon */
+    fill-opacity: 1;
+    stroke: #808080; /* Gray color for the bookmark icon */
+    stroke-width: 3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+    paint-order: normal;
+    transition: fill 250ms ease, stroke 250ms ease;
+}
+
+.btn .icon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn .icon-container.second-icon {
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+.btn .icon-container.second-icon svg .bookmark {
+    fill: #3e9eeb;
+    stroke: #4f80a7;
+    stroke-width: 5px;
+}
+
+/* Active state (when clicked) */
+.btn.active {
+    background: #3e9eeb; /* Fill with gray color */
+}
+
+.btn.active .bookmark {
+    fill: #fff; /* White color for the bookmark icon */
+    stroke: #fff; /* White color for the bookmark icon */
+}
+
+.btn:active {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.textt {
+    font-size: 1.1vw;
+    color: gray
+}
 
 /* Download Button */
 .download-btn {
-    background: rgba(0, 0, 0, 0.1);
+    background: none;
     border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.download-btn:hover {
-    background: rgba(0, 0, 0, 0.2);
+.download-icon {
+    width: px; /* Set width */
+    height: px; /* Set height */
+    transition: opacity 0.3s ease;
 }
+
+.download-btn:hover .download-icon {
+    opacity: 1; /* Add hover effect */
+}
+
 
 /* Footer */
 footer {
@@ -500,4 +619,23 @@ footer {
     width: 12%;
     padding: 10px 0; /* Add some padding for spacing */
     box-sizing: border-box;
+}
+
+/* new styles for theme toggle button */
+.theme-toggle-container {
+    padding-left: 0px;
+    padding-right:5px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle-btn img {
+    width: 30px;
+    height: 30px;
 }
