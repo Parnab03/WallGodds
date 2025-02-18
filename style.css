@@ -468,17 +468,25 @@ main {
 /* Like Button */
 .like-btn {
     background: none;
-    border: none;
+    border: 2px solid #ff1493; /* Deep pink border */
+    border-radius: 50%; /* Circular shape */
     font-size: 16px;
     cursor: pointer;
-    padding: 5px;
-    color: grey; /* Default color */
-    transition: color 0.3s ease;
+    padding: 8px; /* Adjusted padding for circular shape */
+    color: #ff1493; /* Pink heart initially */
+    transition: all 0.3s ease;
+    width: 40px; /* Match save button size */
+    height: 40px; /* Match save button size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Like Button: When clicked */
 .like-btn.liked {
-    color: red; /* Liked color */
+    background-color: #ff69b4; /* Light pink fill */
+    border-color: #ff69b4; /* Match border to fill color */
+    color: white; /* White heart when filled */
 }
 
 /* Save Button */
@@ -486,7 +494,7 @@ main {
     position: relative;
     width: 40px; /* Adjusted size */
     height: 40px; /* Adjusted size */
-    border: 2px solid #808080; /* Gray outer border */
+    border: 2px solid #3e9eeb; /* Gray outer border */
     outline: none;
     background: transparent; /* Transparent background */
     border-radius: 50%;
@@ -533,14 +541,14 @@ main {
 }
 
 .btn .icon-container.second-icon svg .bookmark {
-    fill: #000;
-    stroke: #000;
+    fill: #3e9eeb;
+    stroke: #4f80a7;
     stroke-width: 5px;
 }
 
 /* Active state (when clicked) */
 .btn.active {
-    background: #808080; /* Fill with gray color */
+    background: #3e9eeb; /* Fill with gray color */
 }
 
 .btn.active .bookmark {
@@ -553,7 +561,7 @@ main {
 }
 
 .textt {
-    font-size: 1vw;
+    font-size: 1.1vw;
     color: gray
 }
 
