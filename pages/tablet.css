@@ -39,12 +39,12 @@ body {
 
 /* Light mode background image */
 body[data-theme="light"] {
-    background-image: url('Frontend/public/BACKGROUND.svg');
+    background-image: url('../Frontend/public/BACKGROUND.svg');
 }
 
 /* Dark mode background image */
 body[data-theme="dark"] {
-    background-image: url('Frontend/public/BACKGROUND-DARK.svg');
+    background-image: url('../Frontend/public/BACKGROUND-DARK.svg');
 }
 
 /* Navbar styles */
