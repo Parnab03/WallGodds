@@ -23,6 +23,7 @@
     top: 0.8em;
     left: 0;
     z-index: 1000;
+    padding-left: 8%;
 }
 
 .MainContainer {
@@ -160,11 +161,16 @@
 }
 
 .logoContainer {
+    position: absolute; /* Fix logo at a position */
     margin-right: 1.2em;
+    top: 2em; /* Align it with the top of the NavBar */
+    left: 2.5em; /* Add slight spacing from the left edge */
+    width: 14%; 
+    height: auto;
+    z-index: 1001; /* Ensure it is above the menu */
     display: flex;
-    width: 15%;
-    height: 100%;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -176,9 +182,10 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.15);
 }
+
 
 @media (max-width: 1211px) {
     .menu {
@@ -212,6 +219,14 @@
     .searchContainer {
         width: 400px;
     }
+
+    .navbarWrapper {
+        padding-left: 10%;
+    }
+
+    .logoContainer {
+        left: 2em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -232,6 +247,14 @@
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .navbarWrapper {
+        padding-left: 10%;
+    }
+
+    .logoContainer {
+        left: 1em;
+    }
 }
 
 @media (max-width: 576px) {
@@ -246,6 +269,11 @@
 
     .searchInput {
         padding: 8px;
+    }
+
+    .logoContainer {
+        top: 2.5em;
+        left: 1em;
     }
 }
 

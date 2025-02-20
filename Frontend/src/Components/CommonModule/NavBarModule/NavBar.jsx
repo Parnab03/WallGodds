@@ -1,18 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "/Logo.svg";
 import Search from "/SearchIcon.svg";
 import Profile from "/ProfileIcon.svg";
 import Style from "./NavBar.module.css";
 import ThemeToggle from "../../ThemeModule/ThemeToggle";
+import Logo from "./Logo";
+
 
 const NavBar = () => {
     return (
         <div className={Style.navbarWrapper}>
-            {/* Logo Section */}
-            <div className={Style.logoContainer}>
-                <img className={Style.logo} src={Logo} alt="Logo" />
-            </div>
+             {/* Logo Section */}
+             <Logo />
 
             {/* Navigation Menu */}
             <nav className={Style.navbar}>

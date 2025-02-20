@@ -1,15 +1,19 @@
 .sidebar {
     position: fixed;
     top: 3.9em;
-    height: fit-content;
-    width: 13vw;
-    /* padding-left: 3.5em; */
+    height: 100vh; /* Ensure sidebar takes full height */
+    width: clamp(12%, 13vw, 20%); /* Adjust width dynamically */
+    min-height: 100vh; /* Ensure it fills the full height */
     padding-left: 3.75%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-top: 3.2em;
+    transition: width 0.3s ease-in-out; /* Smooth resizing */
+    justify-content: space-between; /* Distributes items properly */
+    padding-bottom: 1rem; /* Small gap at the bottom */
 }
+
 
 .mainContainer {
     border-radius: 3.7px;
@@ -20,6 +24,7 @@
     justify-content: space-between;
     min-height: 80vh;
 }
+
 
 .listContainer {
     padding: 10px;
@@ -68,6 +73,13 @@
 
 .listItem img{
     width: 1.05em;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+}
+
+.listItem:nth-child(3) img {
+    /* since Desktop.svg appears smaller, scale its size to match Mobile & Tablet */
+    width: 1.18em !important; 
 }
 
 .listItem::before {
@@ -129,7 +141,7 @@ small {
 
 @media (max-width: 1250px) {
     .sidebar{
-        width: 15vw;
+        width: 16vw;
         /* padding-left: 2.5em; */
     }
 
@@ -141,10 +153,20 @@ small {
     }
 
     .listItem img{
-        width: 0.8em;
+        width: 1em;
     }
 
     .copyright{
-        font-size: 0.8em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 17vw; 
+        padding-left: 2%;
+    }
+    .listItem img {
+        width: 1.2em;
     }
 }
