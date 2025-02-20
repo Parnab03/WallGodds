@@ -419,7 +419,7 @@ main {
     flex-wrap: wrap;  /* Allow wrapping of wallpaper cards */
     justify-content: space-around; /* Align items left to right */
     margin-left: 5.5%;
-    margin-top: 10px;
+    margin-top: 20px;
     overflow: visible;
     min-height: 100vh;
     padding: 20px;
@@ -514,15 +514,15 @@ main {
 
 .username {
     font-size: 1vw;
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    color: #808080;
+    text-shadow: 0 0 5px rgb(0 0 0 / 0%);
 }
 
 /* Button Styling */
 .btn {
     width: 28px;
     height: 28px;
-    background: rgba(255,255,255,0.8);
+    background: rgb(255 255 255 / 53%);
     border-radius: 50%;
     padding: 5px;
     transition: all 0.3s ease;
@@ -558,13 +558,13 @@ main {
 
 /* Dark Theme Adjustments */
 [data-theme="dark"] .username {
-    color: rgba(255,255,255,0.9);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .btn,
 [data-theme="dark"] .like-btn,
 [data-theme="dark"] .download-btn {
-    background: rgba(0,0,0,0.3);
+    background: rgb(193 171 171 / 0%);
 }
 
 
@@ -665,10 +665,6 @@ main {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
-.textt {
-    font-size: 1.1vw;
-    color: gray
-}
 
 /* Download Button */
 .download-btn {
