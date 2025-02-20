@@ -413,30 +413,41 @@ main {
     margin-left:150px;
 }
 
-
 /* Wallpaper Gallery Layout */
 .wallpaper-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between columns */
-    padding: 40px;
-    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping of wallpaper cards */
+    justify-content: space-around; /* Align items left to right */
+    margin-left: 5.5%;
+    margin-top: 10px;
+    overflow: visible;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 /* Wallpaper Column */
 .wallpaper-column {
     display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between wallpaper cards */
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3%;
+    gap: 10px; /* Space between wallpaper cards */
 }
 
 /* Wallpaper Card */
 .wallpaper-card {
-    background: #fff;
+    width: calc(33.33% - 10px); /* Set the width to 1/3 of the row minus gap space */
+    height: fit-content;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 1.5%;
+    position: relative;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    background: var(--card-bg);
 }
 
 .wallpaper-card:hover {
@@ -448,6 +459,22 @@ main {
     height: auto;
     display: block;
 }
+
+
+/* Icons Positioning */
+.icons {
+    display: flex;
+    position: absolute;
+    margin: 1.5%;
+    justify-content: end;
+    align-items: center;
+    gap: 18px;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+
 
 /* Wallpaper Info Styles */
 .wallpaper-info {
@@ -471,6 +498,77 @@ main {
     align-items: center;
     gap: 10px; /* Space between username and download button */
 }
+
+/* Bottom Bar */
+.bottom-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+}
+
+.username {
+    font-size: 1vw;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Button Styling */
+.btn {
+    width: 28px;
+    height: 28px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn .icon {
+    width: 100%;
+    height: 100%;
+}
+
+.like-btn {
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 5px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.download-btn {
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.download-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .username {
+    color: rgba(255,255,255,0.9);
+}
+
+[data-theme="dark"] .btn,
+[data-theme="dark"] .like-btn,
+[data-theme="dark"] .download-btn {
+    background: rgba(0,0,0,0.3);
+}
+
+
+
 
 /* Like Button */
 .like-btn {
@@ -639,3 +737,4 @@ footer {
     width: 30px;
     height: 30px;
 }
+
