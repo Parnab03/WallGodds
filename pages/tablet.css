@@ -418,7 +418,7 @@ main {
     display: flex;
     flex-wrap: wrap;  /* Allow wrapping of wallpaper cards */
     justify-content: space-around; /* Align items left to right */
-    margin-left: 5.5%;
+    margin-left: 2%;
     margin-top: 20px;
     overflow: visible;
     min-height: 100vh;
@@ -445,9 +445,9 @@ main {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0%);
     transition: transform 0.3s ease;
-    background: var(--card-bg);
+    background: #ff000000;
 }
 
 .wallpaper-card:hover {
@@ -474,48 +474,22 @@ main {
     right: 0;
 }
 
-
-
-/* Wallpaper Info Styles */
-.wallpaper-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between left and right sections */
-    padding: 10px;
-    background: rgba(255, 255, 255, 0); /* Transparent background */
-}
-
-/* Left Section (Like and Save Buttons) */
-.left-section {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between like and save buttons */
-}
-
-/* Right Section (Username and Download Button) */
-.right-section {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between username and download button */
-}
-
 /* Bottom Bar */
+
 .bottom-bar {
-    width: 100%;
-    height: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    align-items: anchor-center;
+    margin-top: 0px;
+    padding: 0px;
+    background-color:#ff000000;
 }
-
 .username {
-    font-size: 1vw;
+    font-size: 16px;
+    text-box:left;
     color: #808080;
     text-shadow: 0 0 5px rgb(0 0 0 / 0%);
+    padding-right:78px;
 }
 
 /* Button Styling */
@@ -546,7 +520,7 @@ main {
 }
 
 .download-btn {
-    background: rgba(255,255,255,0.8);
+    background: rgb(255 255 255 / 0%);
     border-radius: 50%;
     padding: 5px;
 }
@@ -733,4 +707,3 @@ footer {
     width: 30px;
     height: 30px;
 }
-
