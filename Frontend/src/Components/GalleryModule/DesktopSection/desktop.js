@@ -25,19 +25,19 @@ themeToggleBtn.addEventListener('click', () => {
 
 // Update theme icon
 function updateThemeIcon(theme) {
-    const iconPath = theme === 'light' ? 'Frontend/public/DarkIcon.svg' : 'Frontend/public/LightIcon.svg';
+    const iconPath = theme === 'light' ? '../../../../../Frontend/public/DarkIcon.svg' : '../../../../../Frontend/public/LightIcon.svg';
     themeToggleBtn.querySelector('img').src = iconPath;
 }
 
 // Update logo
 function updateLogo(theme) {
-    logo.src = theme === 'light' ? 'Frontend/public/Logo.svg' : 'Frontend/public/Logo-white.svg';
+    logo.src = theme === 'light' ? '../../../../../Frontend/public/Logo.svg' : '../../../../../Frontend/public/Logo-white.svg';
 }
 
 // Update download button icons
 function updateDownloadButtonIcon(theme) {
     document.querySelectorAll('.download-icon').forEach(icon => {
-        icon.src = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
+        icon.src = theme === 'light' ? '../../../../../Frontend/public/DownloadButton.svg' : '../../../../../Frontend/public/DownloadButton-white.svg';
     });
 }
 
