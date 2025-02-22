@@ -413,16 +413,99 @@ main {
     margin-left:150px;
 }
 
+/* Gallery Layout Adjustments */
+.wallpaper-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: flex-start;
+    padding: 0 5%;
+}
+
+.wallpaper-card {
+    width: 18%; /* 5 items per row (100% - 8% gap) / 5 = 18.4% */
+    margin-bottom: 3%;
+    position: relative;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Username Positioning */
+.username {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Icons Positioning */
+.icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between; /* Changed from 'end' */
+    z-index: 10;
+    margin: 0; /* Remove previous margin */
+    gap: 0; /* Remove previous gap */
+}
+
+/* Bottom Bar Adjustments */
+.bottom-bar {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Download Button Size */
+.download-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Hover Effects */
+.wallpaper-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .wallpaper-card {
+        width: 23%; /* 4 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .wallpaper-card {
+        width: 31%; /* 3 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .wallpaper-card {
+        width: 48%; /* 2 items per row */
+    }
+}
+
+
 /* Wallpaper Gallery Layout */
 .wallpaper-gallery {
     display: flex;
     flex-wrap: wrap;  /* Allow wrapping of wallpaper cards */
-    justify-content: space-around; /* Align items left to right */
     margin-left: 2%;
     margin-top: 25px;
     overflow: visible;
     min-height: 100vh;
     padding: 20px;
+    gap: 10px; /* Space between wallpaper cards in both directions */
 }
 
 /* Wallpaper Column */
@@ -431,14 +514,13 @@ main {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 3%;
-    gap: 10px; /* Space between wallpaper cards */
 }
 
 /* Wallpaper Card */
 .wallpaper-card {
-    width: calc(33.33% - 40px); /* Set the width to 1/3 of the row minus gap space */
+    width: calc(20% - 20px); /* Set the width to 1/5 of the row minus gap space */
     height: fit-content;
-    padding-bottom:25px;
+    padding-bottom: 25px;
     display: flex;
     align-items: end;
     flex-direction: column;
@@ -461,19 +543,6 @@ main {
     display: block;
 }
 
-
-/* Icons Positioning */
-.icons {
-    display: flex;
-    position: absolute;
-    margin: 1.5%;
-    justify-content: end;
-    align-items: center;
-    gap: 18px;
-    z-index: 10;
-    top: 0;
-    right: 0;
-}
 
 /* Bottom Bar */
 
@@ -520,16 +589,6 @@ main {
     transition: all 0.3s ease;
 }
 
-.download-btn {
-    background: rgb(255 255 255 / 0%);
-    border-radius: 50%;
-    padding: 5px;
-}
-
-.download-icon {
-    width: 24px;
-    height: 24px;
-}
 
 /* Dark Theme Adjustments */
 [data-theme="dark"] .username {
@@ -653,8 +712,8 @@ main {
 }
 
 .download-icon {
-    width: px; /* Set width */
-    height: px; /* Set height */
+    width: 100px; /* Set width */
+    height: 50px; /* Set height */
     transition: opacity 0.3s ease;
 }
 
