@@ -20,7 +20,6 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
     updateLogo(newTheme);
-    updateDownloadButtonIcon(newTheme);
 });
 
 // Update theme icon
