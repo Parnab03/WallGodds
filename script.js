@@ -20,6 +20,7 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
     updateLogo(newTheme);
+    updateDownloadButtonIcon(newTheme);
 });
 
 // Update theme icon
@@ -31,6 +32,13 @@ function updateThemeIcon(theme) {
 // Update logo
 function updateLogo(theme) {
     logo.src = theme === 'light' ? 'Frontend/public/Logo.svg' : 'Frontend/public/Logo-white.svg';
+}
+
+// Update download button icons
+function updateDownloadButtonIcon(theme) {
+    document.querySelectorAll('.download-icon').forEach(icon => {
+        icon.src = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
+    });
 }
 
 // Like Button Functionality
