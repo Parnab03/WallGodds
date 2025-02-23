@@ -48,19 +48,3 @@ document.querySelectorAll('.like-btn').forEach(button => {
         this.innerHTML = this.classList.contains('liked') ? '❤️' : '🤍';
     });
 });
-
-// Save Button Animation
-document.querySelectorAll('.btn').forEach(btn => {
-    const t = gsap.timeline({ paused: true });
-    t.to(btn.querySelector('.icon-container.second-icon'), {
-        duration: 0.8,
-        rotationX: 0,
-        ease: "bounce.out"
-    });
-
-    btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        t.reversed() ? t.play() : t.reverse();
-    });
-});
-
