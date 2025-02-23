@@ -40,11 +40,3 @@ function updateDownloadButtonIcon(theme) {
         icon.src = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
     });
 }
-
-// Like Button Functionality
-document.querySelectorAll('.like-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        this.classList.toggle('liked');
-        this.innerHTML = this.classList.contains('liked') ? '❤️' : '🤍';
-    });
-});
