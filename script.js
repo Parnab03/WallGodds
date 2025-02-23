@@ -11,7 +11,6 @@ const savedTheme = localStorage.getItem('theme') || 'light';
 body.setAttribute('data-theme', savedTheme);
 updateThemeIcon(savedTheme);
 updateLogo(savedTheme);
-updateDownloadButtonIcon(savedTheme);
 
 // Theme toggle event
 themeToggleBtn.addEventListener('click', () => {
@@ -20,7 +19,6 @@ themeToggleBtn.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
     updateLogo(newTheme);
-    updateDownloadButtonIcon(newTheme);
 });
 
 // Update theme icon
