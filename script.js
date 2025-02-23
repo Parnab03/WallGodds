@@ -33,10 +33,3 @@ function updateThemeIcon(theme) {
 function updateLogo(theme) {
     logo.src = theme === 'light' ? 'Frontend/public/Logo.svg' : 'Frontend/public/Logo-white.svg';
 }
-
-// Update download button icons
-function updateDownloadButtonIcon(theme) {
-    document.querySelectorAll('.download-icon').forEach(icon => {
-        icon.src = theme === 'light' ? 'Frontend/public/DownloadButton.svg' : 'Frontend/public/DownloadButton-white.svg';
-    });
-}
