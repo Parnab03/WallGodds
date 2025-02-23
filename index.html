@@ -1,208 +1,51 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WallGodds - Wallpaper Website</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-    <!-- Navigation -->
-    <header class="site-header">
-        <div class="header-container">
-            <img class="_logo_9pmj5_35" src="Frontend/public/Logo.svg" alt="Logo">
-            <nav class="_navbar_5pxw7_1">
-                <div class="_MainContainer_5pxw7_10">
-                    <div class="_navItems_5pxw7_40">
-                        <ul class="_menu_5pxw7_47">
-                            <li class="_menuItem_5pxw7_56">Home</li>
-                            <li class="_menuItem_5pxw7_56 active">Gallery</li>
-                            <li class="_menuItem_5pxw7_56">Upload</li>
-                            <li class="_menuItem_5pxw7_56">About Us</li>
-                        </ul>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WallGodds</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+    <body data-theme="dark">
+        <!-- Navigation -->
+        <header class="site-header">
+            <div class="header-container">
+                <img class="_logo_9pmj5_35" src="Frontend/public/Logo-white.svg" alt="Logo" />
+                <nav class="_navbar_5pxw7_1">
+                    <div class="_MainContainer_5pxw7_10">
+                        <div class="_navItems_5pxw7_40">
+                            <ul class="_menu_5pxw7_47">
+                                <li class="_menuItem_5pxw7_56 active"><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
+                                <li class="_menuItem_5pxw7_56"><a href="Frontend/src/Components/GalleryModule/MobileSection/mobile.html" style="text-decoration: none; color: inherit;">Gallery</a></li>
+                                <li class="_menuItem_5pxw7_56"><a href="upload.html" style="text-decoration: none; color: inherit;">Upload</a></li>
+                                <li class="_menuItem_5pxw7_56"><a href="about.html" style="text-decoration: none; color: inherit;">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="_searchContainer_5pxw7_66">
+                            <input class="_searchInput_5pxw7_77" type="text" placeholder="Search your wallpaper" fdprocessedid="inw40f" />
+                            <button class="_searchButton_5pxw7_93" fdprocessedid="l0umv">
+                                <img src="Frontend/public/SearchIcon.svg" alt="Search" />
+                            </button>
+                        </div>
+                        <div class="_profileContainer_5pxw7_100">
+                            <button class="_profileButton_5pxw7_107" fdprocessedid="ju6e5o">
+                                <img src="Frontend/public/ProfileIcon.svg" alt="Profile" />
+                            </button>
+                        </div>
+                        <div class="theme-toggle-container">
+                            <button class="theme-toggle-btn" id="theme-toggle" fdprocessedid="theme-toggle">
+                                <img src="Frontend/public/LightIcon.svg" alt="Toggle Theme" />
+                            </button>
+                        </div>
                     </div>
-                    <div class="_searchContainer_5pxw7_66">
-                        <input class="_searchInput_5pxw7_77" type="text" placeholder="Search your wallpaper" fdprocessedid="inw40f">
-                        <button class="_searchButton_5pxw7_93" fdprocessedid="l0umv">
-                            <img src="Frontend/public/SearchIcon.svg" alt="Search">
-                        </button>
-                    </div>
-                    <div class="_profileContainer_5pxw7_100">
-                        <button class="_profileButton_5pxw7_107" fdprocessedid="ju6e5o">
-                            <img src="Frontend/public/ProfileIcon.svg" alt="Profile">
-                        </button>
-                    </div>
-                    <div class="theme-toggle-container">
-                        <button class="theme-toggle-btn" id="theme-toggle" fdprocessedid="theme-toggle">
-                            <img src="Frontend/public/DarkModeIcon.svg" alt="Toggle Theme">
-                        </button>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Categories -->
-    <div class="categories">
-        <div class="category-buttons">
-            <button class="category-btn" data-category="mobile" onclick="window.location.href='pages/mobile.html'" fdprocessedid="zswblf">Mobile</button>
-             <button class="category-btn" data-category="tablet" onclick="window.location.href='pages/tablet.html'" fdprocessedid="jc62tu">Tablet</button>
-            <button class="category-btn active" data-category="desktop" onclick="window.location.href='../index.html'" fdprocessedid="6zttkd">Desktop</button>
-        </div>
-        <div class="_copyright_9pmj5_65"><p>@CopyRight</p></div>
-    </div>
-
-    <!-- Wallpaper Grid (Desktop Content) -->
-    <!-- Wallpaper Grid (Desktop Content) -->
-<main>
-    <div class="wallpaper-gallery">
-        <!-- Column 1 -->
-        <div class="wallpaper-column">
-            <!-- Wallpaper Card 1 -->
-            <div>
-                <div class="wallpaper-card">
-                    <img src="Wallpapers/wel1.png" alt="Car Wallpaper">
-                </div>
-                <div class="wallpaper-info">
-                    <!-- Save Button -->
-                    <div class="left-section">
-                        <button class="btn">
-                            <div class="icon-container first-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                            <div class="icon-container second-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Like Button -->
-                        <button class="like-btn">🤍</button>
-                    </div>
-                    <!-- Username and Download Button -->
-                    <div class="right-section">
-                        <span class="textt">@user_123</span>
-                        <button class="download-btn" data-img="Wallpapers/wel1.png">
-                            <img src="Frontend/public/DownloadButton-white.svg" alt="Download" class="download-icon">
-                        </button>
-                    </div>
-                </div>
+                </nav>
             </div>
+        </header>
 
-            <!-- Wallpaper Card 2 -->
-            <div>
-                <div class="wallpaper-card">
-                    <img src="Wallpapers/wel2.png" alt="Abstract Wallpaper">
-                </div>
-                <div class="wallpaper-info">
-                    <!-- Save Button -->
-                    <div class="left-section">
-                        <button class="btn">
-                            <div class="icon-container first-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                            <div class="icon-container second-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Like Button -->
-                        <button class="like-btn">🤍</button>
-                    </div>
-                    <!-- Username and Download Button -->
-                    <div class="right-section">
-                        <span class="textt">@user_123</span>
-                        <button class="download-btn" data-img="Wallpapers/wel2.png">
-                            <img src="Frontend/public/DownloadButton-white.svg" alt="Download" class="download-icon">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <footer></footer>
 
-        <!-- Column 2 -->
-        <div class="wallpaper-column">
-            <!-- Wallpaper Card 3 -->
-            <div>
-                <div class="wallpaper-card">
-                    <img src="Wallpapers/wel3.png" alt="Car Wallpaper">
-                </div>
-                <div class="wallpaper-info">
-                    <!-- Save Button -->
-                    <div class="left-section">
-                        <button class="btn">
-                            <div class="icon-container first-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                            <div class="icon-container second-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Like Button -->
-                        <button class="like-btn">🤍</button>
-                    </div>
-                    <!-- Username and Download Button -->
-                    <div class="right-section">
-                        <span class="textt">@user_123</span>
-                        <button class="download-btn" data-img="Wallpapers/wel3.png">
-                            <img src="Frontend/public/DownloadButton-white.svg" alt="Download" class="download-icon">
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Wallpaper Card 4 -->
-            <div>
-                <div class="wallpaper-card">
-                    <img src="Wallpapers/wel4.png" alt="Car Wallpaper">
-                </div>
-                <div class="wallpaper-info">
-                    <!-- Save Button -->
-                    <div class="left-section">
-                        <button class="btn">
-                            <div class="icon-container first-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                            <div class="icon-container second-icon">
-                                <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 180" version="1.1">
-                                    <path class="bookmark" d="m 13.78365,52.827266 c -6.5149597,0 -11.7594881,5.245044 -11.7594881,11.760007 v 60.391147 c 0,3.50128 0.00434,3.46826 -0.039791,8.78447 l 26.4981241,-24.61688 26.004467,24.59415 c 0.08253,-5.26828 0.07559,-5.27302 0.07559,-8.76174 V 64.587273 c 0,-6.514963 -5.245047,-11.760007 -11.760007,-11.760007 z"></path>
-                                </svg>
-                            </div>
-                        </button>
-                        <!-- Like Button -->
-                        <button class="like-btn">🤍</button>
-                    </div>
-                    <!-- Username and Download Button -->
-                    <div class="right-section">
-                        <span class="textt">@user_123</span>
-                        <button class="download-btn" data-img="Wallpapers/wel4.png">
-                            <img src="Frontend/public/DownloadButton-white.svg" alt="Download" class="download-icon">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-    <footer></footer>
- 
-    <script src="script.js"></script>
-    <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
-
-
-
-</body>
+        <script src="script.js"></script>
+        <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
+    </body>
 </html>
