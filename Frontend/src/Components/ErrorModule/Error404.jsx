@@ -7,6 +7,7 @@ import square from "./Error404Assests/Square.svg";
 
 const Error404 = () => {
   return (
+    <div className={styles.big_container}>
     <div className={styles.container}>
       <div className={styles.container_top}>
         <div className={styles.elements}>
@@ -28,6 +29,7 @@ const Error404 = () => {
         </div>
       </div>
       <button className={styles.pageNotFound}>Page Not Found</button>
+    </div>
     </div>
   );
 };

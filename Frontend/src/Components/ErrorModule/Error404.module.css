@@ -13,9 +13,15 @@ body {
   width: 100%;
 }
 
+.big_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .container {
   position: relative;
-  background-color: white;
+  background-color: white;     
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,7 +74,6 @@ body {
 .errorMessage {
   text-align: center;
   font-family: "Comfortaa", sans-serif;
-  margin: 0 11%;
   font-size: 23px;
   font-weight: 700;
   margin: 3% 7%;
@@ -164,5 +169,63 @@ body {
     border-radius: 8px;
     font-size: 0.6rem;
     bottom: -40px;
+  }
+}
+
+@media (max-width: 426px) {
+  body{
+    background-image: url("../BACKGROUND-MOBILE.svg");
+    background-size: cover;
+  }
+  .big_container{
+    height:100vh;
+    justify-content: center;
+  }
+  .container{
+    border-radius: 7px;
+  }
+  .container_top {
+    height: 30px;
+    border-radius: 7px 7px 0 0;
+  }
+  .elements {
+    gap: 7px;
+    margin: 9px;
+  }
+  .elements > img {
+    width: 20px;
+  }
+  .errorCode {
+    padding: 15px 2.5px;
+    font-size: 40px;
+    text-shadow: 5px 4px black;
+  }
+  .errorMessage {
+    font-size: 15px;
+    padding: 0 4px;
+    margin: 0 7%;
+    font-weight: 400;
+  }
+  .homeThisWay{
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    margin: 2rem 0 3.5rem 0;
+  }
+  .homeMessage {
+    padding: 1px 5px;
+    gap: 7px;
+  }
+  .homeMessage > img {
+    width: 22px;
+  }
+  .homeMessage > h1 {
+    font-size: 15px;
+    text-shadow: 2px 2px black;
+    -webkit-text-stroke: 0.5px black;
+  }
+  .pageNotFound {
+    border-radius: 8px;
+    font-size: 0.6rem;
+    bottom: -30px;
   }
 }
