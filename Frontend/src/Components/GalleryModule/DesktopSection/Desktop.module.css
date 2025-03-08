@@ -10,7 +10,8 @@ body {
     margin-left: 5.5%;
     margin-top: 1000;
     overflow: visible;
-    min-height: 100vh;
+    min-height: 100vh;    margin-left: 5px;
+
 }
 
 .imgCards {
@@ -18,5 +19,5 @@ body {
     justify-content: space-around;
     width: 99.5%;
     margin-bottom: 3%;
-    gap: 3%;
+    gap: 0%;
 }

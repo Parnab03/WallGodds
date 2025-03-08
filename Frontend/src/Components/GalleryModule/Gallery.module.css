@@ -17,6 +17,7 @@ body {
     position: relative;
     margin-top: 4em;
     width: 100%;
+    margin-right: 56vh;
 }
 
 .gallery {
@@ -33,6 +34,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-content: start;
+    
 }
 
 .galleryContent {
