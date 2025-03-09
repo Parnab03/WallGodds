@@ -17,28 +17,40 @@ const Mobile = () => {
             <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img1} />
                 <ImgCard imageSrc={img2} />
-                <ImgCard imageSrc={img3} />
-                <ImgCard imageSrc={img4} />
-                <ImgCard imageSrc={img5} />
             </div>
             <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img3} />
+                <ImgCard imageSrc={img4} />
+            </div>
+            <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img5} />
                 <ImgCard imageSrc={img6} />
+            </div>
+            <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img7} />
                 <ImgCard imageSrc={img8} />
+            </div>
+            <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img9} />
                 <ImgCard imageSrc={img10} />
             </div>
             <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img1} />
                 <ImgCard imageSrc={img2} />
-                <ImgCard imageSrc={img3} />
-                <ImgCard imageSrc={img4} />
-                <ImgCard imageSrc={img5} />
             </div>
             <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img3} />
+                <ImgCard imageSrc={img4} />
+            </div>
+            <div className={Styles.imgCards}>
+                <ImgCard imageSrc={img5} />
                 <ImgCard imageSrc={img6} />
+            </div>
+            <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img7} />
                 <ImgCard imageSrc={img8} />
+            </div>
+            <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img9} />
                 <ImgCard imageSrc={img10} />
             </div>
