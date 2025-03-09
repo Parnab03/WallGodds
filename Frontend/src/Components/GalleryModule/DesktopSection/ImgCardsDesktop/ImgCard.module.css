@@ -68,3 +68,48 @@
     transform: scale(1.1);
     color: white;
 }
+
+@media (max-width: 425px)
+{
+    .imgCard{
+        height: 200px;
+        width: 100%;
+        justify-content: end;
+    }
+
+    .imageContainer{
+        position: relative;
+    }
+
+    .bottomBar{
+        position: absolute;
+        height: fit-content;
+        padding-bottom: 2px;
+    }
+
+    .userInfo {
+        gap: 5px;
+        justify-content: end;
+        align-items: center;
+        padding-right: 2%;
+    }
+    
+    .username {
+        font-size: 0.7em;
+    }
+
+    .icons{
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16%;
+        padding: 1.2%;
+    }
+
+    .icon{
+        width: 28%;
+    }
+
+    .downloadBtn {
+        width: 40%;
+    }
+}

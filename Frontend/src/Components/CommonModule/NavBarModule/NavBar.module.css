@@ -283,14 +283,14 @@
 
     .navbar{
         height: fit-content;
-        width: 78%;
+        width: 87%;
         border-radius: 4.5px;
         margin-top: 0.7%;
     }
 
     .navbarWrapper{
         padding: 0;
-        padding-left: 5.5%;
+        padding-left: 10%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -308,6 +308,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 1%;
     }
 
     .logoLink{
