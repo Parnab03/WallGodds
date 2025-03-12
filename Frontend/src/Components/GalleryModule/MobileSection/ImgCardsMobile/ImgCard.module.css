@@ -57,6 +57,10 @@
     align-items: center;
 }
 
+.bottomBar2{
+    display: none;
+}
+
 /* .userInfo {
     display: flex;
     position: relative;
@@ -81,5 +85,61 @@
     }
     .heart, .save {
         width: 8 vw; /* Adjust the icon size for smaller screens */
+    }
+}
+
+@media (max-width: 425px)
+{
+    .imageContainer{
+        position: relative;
+        width: 100%;
+        width: 43.5vw;
+        height: auto;
+    }
+
+    .imgCard{
+        width: 48%;
+        margin-bottom: 0.5%;
+    }
+
+    .image{
+        width: 100%;
+        height: auto;
+    }
+
+    .icons{
+        width: 42%;
+        margin-left: 2.5%;
+        margin-top: 2%;
+    }
+
+    .save{
+        width: 5vw;
+    }
+
+    .heart{
+        width: 4.5vw;
+    }
+
+    .username{
+        font-size: 2.75vw;
+        margin-bottom: 1%;
+    }
+
+    .bottomBar{
+        display: none;
+    }
+
+    .bottomBar2{
+        display: block;
+        position: absolute;
+        width: 46%;
+        bottom: 1.75%;
+        right: 8%;
+    }
+
+    .downloadBtn{
+        /* position: absolute; */
+        width: 21vw;
     }
 }

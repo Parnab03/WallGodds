@@ -20,8 +20,9 @@ const Mobile = () => {
                 <ImgCard imageSrc={img3} />
                 <ImgCard imageSrc={img4} />
                 <ImgCard imageSrc={img5} />
+                <ImgCard imageSrc={img6} />
             </div>
-            <div className={Styles.imgCards}>
+            {/* <div className={Styles.imgCards}>
                 <ImgCard imageSrc={img6} />
                 <ImgCard imageSrc={img7} />
                 <ImgCard imageSrc={img8} />
@@ -41,7 +42,7 @@ const Mobile = () => {
                 <ImgCard imageSrc={img8} />
                 <ImgCard imageSrc={img9} />
                 <ImgCard imageSrc={img10} />
-            </div>
+            </div> */}
             
         </div>
 

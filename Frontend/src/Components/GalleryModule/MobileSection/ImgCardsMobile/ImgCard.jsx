@@ -15,6 +15,14 @@ const ImgCard = ({ imageSrc }) => {
                 <img src={imageSrc} alt="img" className={Style.image} />
 
                 <span className={Style.username}>@Img User1</span>
+
+                <div className={Style.bottomBar2}>
+                    <img
+                        src={DownloadBtn}
+                        alt="Download Button"
+                        className={Style.downloadBtn}
+                    />
+                </div>
             </div>
 
             <div className={Style.bottomBar}>

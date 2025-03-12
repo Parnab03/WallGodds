@@ -19,3 +19,20 @@ body {
     margin-bottom: 3%;
     gap: 5%;
 }
+
+@media (max-width: 425px)
+{
+    .gallery{
+        margin: 0;
+    }
+    
+    .MobileGrid{
+        /* background: rebeccapurple; */
+    }
+
+    .imgCards{
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 0.5%;
+    }
+}
