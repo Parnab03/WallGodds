@@ -70,16 +70,30 @@
     bottom: 10px;
     left: 10px;
     z-index: 10;
-    font-size: 0.85vw; 
+    font-size: 1vw;
     color: #808080;
 }
 
 /* Media query for responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
+    .imageContainer {
+        width: 41vw; /* Adjust the image size for smaller screens */
+    }
+    .downloadBtn{
+        width: 50%;
+    }
+    .bottomBar {
+        position: relative;
+        bottom: 9%;
+        left: 20%;
+    }
+    .username{
+        font-size: 2vw; 
+    }
     .icons {
-        gap: 4vw;  /* Adjust the gap for smaller screens */
+        gap: 26vw;  /* Adjust the gap for smaller screens */
     }
     .heart, .save {
-        width: 8 vw; /* Adjust the icon size for smaller screens */
+        width: 6vw; /* Adjust the icon size for smaller screens */
     }
 }
