@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Search from "/SearchIcon.svg";
 import Profile from "/ProfileIcon.svg";
@@ -8,6 +8,8 @@ import Logo from "./Logo";
 
 
 const NavBar = () => {
+    const [isOpen,setIsOpen] = useState(false);
+
     return (
         <div className={Style.navbarWrapper}>
              {/* Logo Section */}
@@ -16,8 +18,8 @@ const NavBar = () => {
             {/* Navigation Menu */}
             <nav className={Style.navbar}>
                 <div className={Style.MainContainer}>
-                    <div className={Style.navItems}>
-                        <ul className={Style.menu}>
+                    <div className={`${Style.navItems} ${isOpen ? Style.active : ""}`}>
+                        <ul className={`${Style.menu} ${isOpen ? Style.active : ""}`}>
                             <li className={Style.menuItem}>
                                 <NavLink
                                     to="/"
@@ -75,6 +77,9 @@ const NavBar = () => {
                             <img src={Profile} alt="Profile" />
                         </button>
                         <ThemeToggle />
+                    </div>
+                    <div className={`${Style.menuToggle} ${isOpen ? Style.active : ""}`}  onClick={() => setIsOpen(!isOpen)}>
+                            ☰
                     </div>
                 </div>
             </nav>
