@@ -36,7 +36,7 @@
     justify-content: end;
     align-items: center;
     gap: 18px;
-    z-index:10;
+    z-index: 10;
 }
 
 .userInfo {
@@ -49,6 +49,12 @@
 .username {
     font-size: 1vw;
     color: #808080;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+.username:hover {
+    color: #007bff;
+    
 }
 
 :global(.dark-theme) .username {
@@ -56,16 +62,73 @@
 }
 
 /* Optional hover effects */
-.icon{
-    transition: transform 0.2s ease;
+.icon {
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-    width: 28%;
+    transition: transform 0.2s ease, fill 0.3s ease;
+    color: #999;
 }
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.liked {
+    color: red;
+}
+
+.saved {
+    color: #4d4c4c;
+}
+
+.downloadContainer {
+        position: relative;
+        display: inline-block;
+    }
+
+    .popup {
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1e1e1e;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 13px;
+        text-align: center;
+        z-index: 10;
+        animation: fadeInOut 3s ease-in-out;
+        width: 240px;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, 10px);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -10px);
+        }
+    }
+
 
 .downloadBtn {
     transition: transform 0.2s ease;
     cursor: pointer;
-    width: 43%;
+   
 }
 
 .icon:hover,
@@ -74,34 +137,35 @@
 }
 
 @media (max-width: 425px) {
-    .icons{
+    .icons {
         margin: 5.5%;
     }
 
-    .icon{
+    .icon {
         width: 5.5vw;
     }
 
     .icon:nth-child(1) {
-        width: 5.7vw !important; 
+        width: 5.7vw !important;
     }
 
-    .imgCard{
+    .imgCard {
         position: relative;
     }
 
-    .bottomBar{
+    .bottomBar {
         position: absolute;
         bottom: 0;
         padding: 0.4em 0.6em;
     }
 
-    .username{
+    .username {
         font-size: 4.2vw;
+
         margin-left: 1.25em;
     }
 
-    .downloadBtn{
+    .downloadBtn {
         width: 35vw;
     }
 }

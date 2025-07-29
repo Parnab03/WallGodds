@@ -29,23 +29,27 @@
     position: absolute;
     padding: 6px;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, fill 0.3s ease;
+    width: 35px;
+    height: 35px;
+    color: hsla(0, 45%, 98%, 0.932);
 }
 
+
+
+
 /* Bookmark Icon (Top-Left) */
-.bookmarkIcon {
-    top: 1px;
-    left: 1px;
-    color: gray;
-    font-size: 2em;
+.saveIcon {
+    top: 6px;
+    left: 6px;
 }
 
 /* Heart Icon (Top-Right) */
 .heartIcon {
-    top: 4px;
-    right: 4px;
+    top: 6px;
+    right: 6px;
     color: red;
-    font-size: 2em;
+
 }
 
 /* Hover Effect */
@@ -60,11 +64,48 @@
     left: 10px;
     color: rgba(255, 255, 255, 0.582);
     font-size: 12px;
-    font-family: 'Comfortaa','sans-serif';
-    /* background: rgba(255, 255, 255, 0.5); */
+    font-family: 'Comfortaa', 'sans-serif';
     padding: 5px 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
+.username:hover {
+    color: #007bff;
+
+}
+
+.downloadContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.popup {
+    position: absolute;
+    bottom: -3.2em;
+    left: 50 px;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: normal;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    max-width: 90%;
+    text-align: center;
+}
+
+.showPopup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 
 /* Download Button (Larger Screens Only) */
 .downloadBar {
@@ -81,7 +122,7 @@
     border: 1px solid #a9a7a7;
     padding: 0.3em 0.7em;
     font-size: 0.7em;
-    font-family: 'Comfortaa','sans-serif';
+    font-family: 'Comfortaa', 'sans-serif';
     border-radius: 0.6em;
     cursor: pointer;
     display: flex;
@@ -108,22 +149,25 @@
     bottom: 10px;
     left: 0;
     width: 100%;
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
     justify-content: space-around;
     align-items: center;
     padding: 0.3em 0.4em;
     border-radius: 0 0 10px 10px;
-    color:rgba(255, 255, 255, 0.272)
+    color: rgba(255, 255, 255, 0.272)
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .bottomOverlay {
-        display: flex; /* Show only on mobile */
+        display: flex;
+        /* Show only on mobile */
     }
-    
+
     .downloadBar {
-        display: none; /* Hide separate button on mobile */
+        display: none;
+        /* Hide separate button on mobile */
     }
 
     /* Hide the regular username and move it into the bottom overlay */
@@ -131,13 +175,21 @@
         display: none;
     }
 
-    .downloadBtn{
-        background-color:#7e7e7e4e ;
-        font-size:0.5em;
+    .downloadBtn {
+        background-color: #7e7e7e4e;
+        font-size: 0.5em;
     }
 
-    span{
+    span {
         font-size: 0.7em;
+    }
+
+    .popup {
+        bottom: -3em;
+        top: auto;
+        font-size: 0.7rem;
+        padding: 10px;
+        max-width: 90vw;
     }
 
     /* .username{

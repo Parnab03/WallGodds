@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 13px;
+    gap: 2px;
 }
 
 .userInfo {
@@ -49,18 +49,22 @@
 .username {
     font-size: 20px;
     color: #808080;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-:global(.dark-theme) .username {
-    color: rgba(255, 255, 255, 0.8);
+.username:hover {
+    color: #007bff;
+    
 }
+
 
 /* Optional hover effects */
 .icon,
 .downloadBtn {
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
-    width: 58%;
+    width: 85%;
 }
 
 .icon:hover,
@@ -69,19 +73,104 @@
     color: white;
 }
 
-@media (max-width: 425px)
-{
-    .imgCard{
+/* Desktop hover effect */
+@media (min-width: 426px) {
+    .icon:hover {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 6px rgba(0, 183, 255, 0.45));
+        /* blue glow */
+    }
+
+    .icon:active {
+        transform: scale(0.95);
+        filter: brightness(0.9);
+    }
+
+    .heartIcon {
+        width: 48px;
+        height: 28px;
+        cursor: pointer;
+        transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    .heartIcon:hover {
+        transform: scale(1.1);
+    }
+
+
+    .saveIcon {
+        width: 48px;
+        height: 28px;
+        cursor: pointer;
+        transition: transform 0.3s ease, fill 0.3s ease;
+    }
+
+    .saveIcon:hover {
+        transform: scale(1.1);
+    }
+
+    .downloadContainer {
+        position: relative;
+        display: inline-block;
+    }
+
+    .popup {
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1e1e1e;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 13px;
+        text-align: center;
+        z-index: 10;
+        animation: fadeInOut 3s ease-in-out;
+        width: 240px;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, 10px);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        90% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -10px);
+        }
+    }
+
+
+
+
+
+}
+
+
+
+@media (max-width: 425px) {
+    .imgCard {
         height: 200px;
         width: 100%;
         justify-content: end;
     }
 
-    .imageContainer{
+    .imageContainer {
         position: relative;
     }
 
-    .bottomBar{
+    .bottomBar {
         position: absolute;
         height: fit-content;
         padding-bottom: 2px;
@@ -93,20 +182,22 @@
         align-items: center;
         padding-right: 2%;
     }
-    
+
     .username {
         font-size: 0.7em;
     }
 
-    .icons{
+    .icons {
         justify-content: flex-start;
         align-items: center;
         gap: 16%;
         padding: 1.2%;
     }
 
-    .icon{
-        width: 28%;
+    .icon {
+        transition: transform 0.3s ease, filter 0.3s ease;
+        cursor: pointer;
+        width: 58%;
     }
 
     .downloadBtn {
