@@ -142,7 +142,35 @@ Category: Desktop
 - **Designer**: Harsh Kumar
 - **Category**: Desktop
 
+## 17. [sharanya]_[mountain].png
+- **Title**: Alpine Majesty
+- **Description**: Towering snow-capped mountains stretch across the horizon, basking in golden light—an ode to Earth's raw beauty.
+- **Designer**: Sharanya Lakkamsetti
+- **Category**: Desktop
 
+## 18. [sharanya]_[Eiffel].png
+- **Title**:Eiffel in Focus
+- **Description** : The Eiffel Tower rises with quiet grandeur against a serene sky, symbolizing both engineering marvel and romantic charm.
+- **Designer**: Sharanya Lakkamsetti
+- **Category**: Phone
+
+## 19. [sharanya]_[flowers].png
+- **Title**: Flowers
+- **Description**: A vivid wall of blooming bougainvillea spills over with color and life, creating the perfect harmony of nature and structure.
+- **Designer**: Sharanya Lakkamsetti
+- **Category**: Phone
+
+## 20. [sharanya]_[clock].png
+- **Title**: Timeless Precision
+- **Description**: A striking close-up of a classic clock face, capturing the elegance of passing moments with intricate detail.
+- **Designer**: Sharanya Lakkamsetti
+- **Category**: Tablet
+
+## 18. [sharanya]_[Eiffel].png
+- **Title**:Eiffel in Focus
+- **Description** : The Eiffel Tower rises with quiet grandeur against a serene sky, symbolizing both engineering marvel and romantic charm.
+- **Designer**: Sharanya Lakkamsetti
+- **Category**: Tablet
 
 WallGodds values creativity and collaboration. We can't wait to see your contributions! If you have any questions or need help, feel free to connect with our community on [Discord](https://discord.gg/kTQ5KWANp8).  
 
