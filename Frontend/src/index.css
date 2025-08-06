@@ -1,14 +1,21 @@
-/* Global CSS (e.g., index.css or App.module.css) */
-:root {
-    --font-family: "Comfortaa", sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the homepage */
+@layer components {
+  .font-rubik-mono {
+    font-family: 'Rubik Mono One', monospace;
+  }
+  
+  .font-comfortaa {
+    font-family: 'Comfortaa', sans-serif;
+  }
 }
 
-body {
-    margin: 0;
-    font-family: var(--font-family);
-    background-image: url("/BACKGROUND.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+/* Base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
