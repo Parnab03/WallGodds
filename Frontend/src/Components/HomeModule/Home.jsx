@@ -1,37 +1,48 @@
 import React from "react";
 import NavBar from "../CommonModule/NavBarModule/NavBar";
 import styles from "./Home.module.css";
+import {Footer} from "../CommonModule/FooterModule/Footer";
+import character from "/Character.svg";
 
 const Home = () => {
-    return (
-        <>
-            <NavBar />
-            <div className={styles.dev}>
-                <h1>Under Development</h1>
-                <p>
-                    Please check the related issues on GitHub:
-                    <ul>
-                        <li>
-                            <a
-                                href="https://github.com/Parnab03/WallGodds/issues/79"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                HOME PAGE
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/Parnab03/WallGodds/issues/82"
-                                target="_blank"
-                                rel="noopener noreferrer">
-                                HOME PAGE ON MOBILE VIEW
-                            </a>
-                        </li>
-                    </ul>
-                </p>
+  return (
+    <>
+      <NavBar />
+      <div className={styles.heroSection}>
+        <div className={styles.mainContainer}>
+          <div className={styles.characterElement}>
+            <img
+              src={character}
+              alt="3D Illustration"
+              className={styles.characterImage}
+            />
+          </div>
+          <div className={styles.centerWrapper}>
+            <div className={styles.centerContainer}>
+              <div className={styles.textContainer}>
+                <h1 className={styles.headLine}>
+                  WE ARE THE <br /> <span className={styles.godText}>GOD</span>
+                  <br />
+                  OF
+                  <br />
+                  <span className={styles.wallpaperText}>WALLPAPERS</span>
+                </h1>
+              </div>
+              <div className={styles.buttons}>
+                <button class={styles.btn}>
+                  BECOME A <span className={styles.god}>GOD</span>
+                </button>
+                <button class={styles.btn}>
+                  EXPLORE <span className={styles.heaven}>HEAVEN</span>
+                </button>
+              </div>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
