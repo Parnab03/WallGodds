@@ -1,28 +1,133 @@
-.dev {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 40px 0 40px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin-top: 75%;
+/* Main container */
+.container {
+  display: grid;
+  grid-template-columns: 220px 1fr 420px; /* Sidebar | Upload Box | Instructions */
+  gap: 50px;
+  width: 100%;
+  max-width: 1600px; /* center content with max width */
+  margin: 60px auto; /* space from top and bottom + center horizontally */
+  padding: 0 40px;
+  align-items: center; /* vertical alignment */
+  min-height: calc(100vh - 120px); /* full screen minus navbar */
+  box-sizing: border-box;
 }
 
-.dev h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #f0f4ff, #ffeaf0);
+  padding: 50px 20px;
+  border-radius: 20px;
+  min-height: 550px;
+  justify-content: space-between;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.dev p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #666;
-    text-align: center;
+.sideBtn {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin: 14px 0;
+  padding: 16px 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sideBtn:hover {
+  background: #f9f9f9;
+}
+
+.active {
+  border: 2px solid #ff69b4;
+  background: #fff;
+  color: #ff69b4;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+}
+
+.footer {
+  font-size: 13px;
+  color: #555;
+  margin-top: auto;
+}
+
+/* Upload Box */
+.uploadBox {
+  width: 100%;
+  height: 550px; /* increased */
+  border-radius: 20px;
+  background: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.uploadBox:hover {
+  background: #dcdcdc;
+}
+
+.iconWrapper svg {
+  width: 80px;
+  height: 80px;
+  stroke: #555;
+}
+
+/* Instructions */
+.instructions {
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.instructions h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #111;
+}
+
+.instructions ul {
+  padding-left: 24px;
+}
+
+.instructions li {
+  margin-bottom: 16px;
+}
+
+/* Inline buttons inside instructions */
+.inlineBtns {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 8px;
+}
+
+.inlineBtn {
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.activeInline {
+  border: 1px solid #ff69b4;
+  background: #ffeaf3;
+  color: #ff69b4;
+  font-weight: 600;
 }
