@@ -179,12 +179,15 @@ const NavBar = () => {
                             <img src={Search} alt="Search" />
                         </button>
                     </div>
+                   
+
                     <div className={Style.profileContainer}>
-                        <button className={Style.profileButton}>
-                            <img src={Profile} alt="Profile" />
-                        </button>
-                        <ThemeToggle />
-                    </div>
+                <NavLink to="/profile" className={Style.profileButton}>
+                <img src={Profile} alt="Profile" />
+                 </NavLink>
+               <ThemeToggle />
+                </div>
+
                 </div>
             </nav>
         </div>

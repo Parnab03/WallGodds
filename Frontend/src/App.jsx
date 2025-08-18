@@ -10,6 +10,7 @@ import Profile from "./Components/ProfileModule/Profile";
 import Footer from "./Components/AboutModule/Footer"; 
 
 
+
 function App() {
     return (
         <Router>
