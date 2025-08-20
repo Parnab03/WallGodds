@@ -1,0 +1,198 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.popup {
+    background: linear-gradient(135deg, #7056F5 0%, #ABB3FE 100%);
+    border-radius: 15px;
+    padding: 0;
+    max-width: 90vw;
+    width: 400px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: popupSlideIn 0.3s ease-out;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.header {
+    background: linear-gradient(90deg, #008FFF 0%, #FF9D00 25%, #D90000 50%, #970088 100%);
+    padding: 20px 25px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.title {
+    color: #FFFFFF;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Comfortaa', sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #FFFFFF;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+}
+
+.closeButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.message {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socialLink {
+    background: linear-gradient(135deg, #F2AB93 0%, #F76582 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(247, 101, 130, 0.3);
+    border: 2px solid transparent;
+}
+
+.socialLink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 101, 130, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark theme styles */
+:global(.dark-theme) .popup {
+    background: linear-gradient(135deg, rgba(112, 86, 245, 0.9) 0%, rgba(171, 179, 254, 0.9) 100%);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+:global(.dark-theme) .content {
+    background: rgba(11, 20, 55, 0.95);
+}
+
+:global(.dark-theme) .message {
+    color: #FFFFFF;
+}
+
+/* Ensure popup is above all other elements */
+.overlay {
+    z-index: 9999;
+}
+
+/* Prevent body scroll when popup is open */
+:global(body.popup-open) {
+    overflow: hidden;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .popup {
+        width: 95vw;
+        max-width: 350px;
+        margin: 20px;
+    }
+
+    .header {
+        padding: 15px 20px 10px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    .socialLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .socialLink {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 90vw;
+        max-width: 300px;
+    }
+
+    .header {
+        padding: 12px 15px 8px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: 14px;
+    }
+}
