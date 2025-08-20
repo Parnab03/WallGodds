@@ -4,9 +4,13 @@ import Heart from "/Heart.svg";
 import DownloadBtn from "/DownloadButton.svg";
 import Style from "./ImgCard.module.css";
 import Popup from "../../../CommonModule/PopupModule/Popup.jsx";
+import Toast from "../../../CommonModule/ToastModule/Toast.jsx";
 
 const ImgCard = ({ imageSrc }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
+    const [isSaved, setIsSaved] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
 
     const handleDownloadClick = () => {
         setIsPopupOpen(true);
@@ -16,6 +20,28 @@ const ImgCard = ({ imageSrc }) => {
         setIsPopupOpen(false);
     };
 
+    const handleLikeClick = () => {
+        setIsLiked(!isLiked);
+        setToast({
+            show: true,
+            message: !isLiked ? 'Wallpaper added to favorites!' : 'Wallpaper removed from favorites!',
+            type: 'success'
+        });
+    };
+
+    const handleSaveClick = () => {
+        setIsSaved(!isSaved);
+        setToast({
+            show: true,
+            message: !isSaved ? 'Wallpaper saved to collection!' : 'Wallpaper removed from collection!',
+            type: 'success'
+        });
+    };
+
+    const closeToast = () => {
+        setToast({ ...toast, show: false });
+    };
+
     return (
         <div className={Style.imgCard}>
             <div className={Style.imageContainer}>
@@ -23,8 +49,18 @@ const ImgCard = ({ imageSrc }) => {
             </div>
             <div className={Style.bottomBar}>
                 <div className={Style.icons}>
-                    <img src={Save} alt="Save" className={Style.icon} />
-                    <img src={Heart} alt="Heart" className={Style.icon} />
+                    <img 
+                        src={Save} 
+                        alt="Save" 
+                        className={`${Style.icon} ${isSaved ? Style.saved : ''}`}
+                        onClick={handleSaveClick}
+                    />
+                    <img 
+                        src={Heart} 
+                        alt="Heart" 
+                        className={`${Style.icon} ${isLiked ? Style.liked : ''}`}
+                        onClick={handleLikeClick}
+                    />
                 </div>
                 <div className={Style.userInfo}>
                     <span className={Style.username}>@user_123</span>
@@ -42,6 +78,13 @@ const ImgCard = ({ imageSrc }) => {
                 onClose={closePopup}
                 message="Download not available right now. Stay tuned! For backend updates, follow our Discord and check the GitHub repo."
                 title="Download Status"
+            />
+
+            <Toast
+                isVisible={toast.show}
+                message={toast.message}
+                type={toast.type}
+                onClose={closeToast}
             />
         </div>
     );

@@ -5,9 +5,13 @@ import Save from "/Save.svg";
 import Heart from "/Heart.svg";
 import Download from "/Vector.svg";
 import Popup from "../../../CommonModule/PopupModule/Popup.jsx";
+import Toast from "../../../CommonModule/ToastModule/Toast.jsx";
 
 const ImgCard = ({ imageSrc, username = "@ImgUser1" }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
+    const [isSaved, setIsSaved] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: 'success' });
 
     const handleDownloadClick = () => {
         setIsPopupOpen(true);
@@ -17,6 +21,28 @@ const ImgCard = ({ imageSrc, username = "@ImgUser1" }) => {
         setIsPopupOpen(false);
     };
 
+    const handleLikeClick = () => {
+        setIsLiked(!isLiked);
+        setToast({
+            show: true,
+            message: !isLiked ? 'Wallpaper added to favorites!' : 'Wallpaper removed from favorites!',
+            type: 'success'
+        });
+    };
+
+    const handleSaveClick = () => {
+        setIsSaved(!isSaved);
+        setToast({
+            show: true,
+            message: !isSaved ? 'Wallpaper saved to collection!' : 'Wallpaper removed from collection!',
+            type: 'success'
+        });
+    };
+
+    const closeToast = () => {
+        setToast({ ...toast, show: false });
+    };
+
     return (
         <div className={Style.imgCard}>
             {/* Image Container with Overlay Icons */}
@@ -24,8 +50,18 @@ const ImgCard = ({ imageSrc, username = "@ImgUser1" }) => {
                 <img src={imageSrc} alt="Wallpaper" className={Style.image} />
 
                 {/* Left (Bookmark) & Right (Heart) Overlay Icons */}
-                <img src={Save} alt="Save" className={`${Style.icon} ${Style.bookmarkIcon}`} />
-                <img src={Heart} alt="Heart" className={`${Style.icon} ${Style.heartIcon}`} />
+                <img 
+                    src={Save} 
+                    alt="Save" 
+                    className={`${Style.icon} ${Style.bookmarkIcon} ${isSaved ? Style.saved : ''}`}
+                    onClick={handleSaveClick}
+                />
+                <img 
+                    src={Heart} 
+                    alt="Heart" 
+                    className={`${Style.icon} ${Style.heartIcon} ${isLiked ? Style.liked : ''}`}
+                    onClick={handleLikeClick}
+                />
 
                 {/* Username (Always Visible on Large Screens) */}
                 <span className={Style.username}>{username}</span>
@@ -51,6 +87,13 @@ const ImgCard = ({ imageSrc, username = "@ImgUser1" }) => {
                 onClose={closePopup}
                 message="Download not available right now. Stay tuned! For backend updates, follow our Discord and check the GitHub repo."
                 title="Download Status"
+            />
+
+            <Toast
+                isVisible={toast.show}
+                message={toast.message}
+                type={toast.type}
+                onClose={closeToast}
             />
         </div>
     );
