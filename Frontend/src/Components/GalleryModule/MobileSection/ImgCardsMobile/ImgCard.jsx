@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Style from "./ImgCard.module.css";
 import { LiaDownloadSolid } from "react-icons/lia";
 import Save from "/Save.svg";
+import SaveFilled from "/Save-filled.svg";
 import Heart from "/Heart.svg";
+import HeartFilled from "/Heart-filled.svg";
 import Download from "/Vector.svg";
 import Popup from "../../../CommonModule/PopupModule/Popup.jsx";
 import Toast from "../../../CommonModule/ToastModule/Toast.jsx";
@@ -51,13 +53,13 @@ const ImgCard = ({ imageSrc, username = "@ImgUser1" }) => {
 
                 {/* Left (Bookmark) & Right (Heart) Overlay Icons */}
                 <img 
-                    src={Save} 
+                    src={isSaved ? SaveFilled : Save} 
                     alt="Save" 
                     className={`${Style.icon} ${Style.bookmarkIcon} ${isSaved ? Style.saved : ''}`}
                     onClick={handleSaveClick}
                 />
                 <img 
-                    src={Heart} 
+                    src={isLiked ? HeartFilled : Heart} 
                     alt="Heart" 
                     className={`${Style.icon} ${Style.heartIcon} ${isLiked ? Style.liked : ''}`}
                     onClick={handleLikeClick}

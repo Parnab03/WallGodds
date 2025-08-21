@@ -147,7 +147,7 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: rgba(255, 255, 255, 0.582);
+    color: #FFFFFF;
     font-size: 12px;
     font-family: 'Comfortaa','sans-serif';
     /* background: rgba(255, 255, 255, 0.5); */
@@ -158,10 +158,10 @@
 }
 
 .username:hover {
-    background: linear-gradient(135deg, #F2AB93 0%, #F76582 100%);
+    background: rgba(255, 255, 255, 0.2);
     color: #FFFFFF;
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(247, 101, 130, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Download Button (Larger Screens Only) */

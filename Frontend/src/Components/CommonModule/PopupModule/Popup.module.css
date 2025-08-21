@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(240, 240, 240, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,16 +13,17 @@
 }
 
 .popup {
-    background: linear-gradient(135deg, #7056F5 0%, #ABB3FE 100%);
-    border-radius: 15px;
-    padding: 0;
+    background-color: white;
+    border-radius: 20px;
     max-width: 90vw;
-    width: 400px;
+    width: 500px;
     max-height: 90vh;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
     animation: popupSlideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes popupSlideIn {
@@ -37,96 +38,127 @@
 }
 
 .header {
-    background: linear-gradient(90deg, #008FFF 0%, #FF9D00 25%, #D90000 50%, #970088 100%);
-    padding: 20px 25px 15px;
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    width: 100%;
+    padding: 0.3rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px 20px 0 0;
 }
 
-.title {
-    color: #FFFFFF;
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Comfortaa', sans-serif;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.elements {
+    display: flex;
+    gap: 6px;
+}
+
+.elements img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
 }
 
 .closeButton {
-    background: rgba(255, 255, 255, 0.2);
+    background: #ff0000;
     border: none;
     color: #FFFFFF;
-    font-size: 24px;
-    width: 32px;
-    height: 32px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
-    backdrop-filter: blur(5px);
+    font-weight: bold;
+    position: relative;
+}
+
+.closeButton::before,
+.closeButton::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+}
+
+.closeButton::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .closeButton:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #ff6666;
     transform: scale(1.1);
 }
 
 .content {
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: white;
+    min-height: 200px;
 }
 
 .message {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
     text-align: center;
-    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0 0 2rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
 }
 
-.socialLinks {
+.buttonContainer {
     display: flex;
+    gap: 1rem;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    width: 100%;
 }
 
-.socialLink {
-    background: linear-gradient(135deg, #F2AB93 0%, #F76582 100%);
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 12px 20px;
+.actionButton {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    border: none;
+    color: white;
+    padding: 0.8rem 1.5rem;
     border-radius: 25px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(247, 101, 130, 0.3);
-    border: 2px solid transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 100px;
 }
 
-.socialLink:hover {
+.actionButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(247, 101, 130, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 143, 255, 0.3);
 }
 
 /* Dark theme styles */
+:global(.dark-theme) .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 :global(.dark-theme) .popup {
-    background: linear-gradient(135deg, rgba(112, 86, 245, 0.9) 0%, rgba(171, 179, 254, 0.9) 100%);
-    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 :global(.dark-theme) .content {
-    background: rgba(11, 20, 55, 0.95);
+    background: #1a1a1a;
 }
 
 :global(.dark-theme) .message {
-    color: #FFFFFF;
+    color: #ccc;
 }
 
 /* Ensure popup is above all other elements */
@@ -143,56 +175,70 @@
 @media (max-width: 768px) {
     .popup {
         width: 95vw;
-        max-width: 350px;
+        max-width: 400px;
         margin: 20px;
     }
 
     .header {
-        padding: 15px 20px 10px;
+        padding: 0.8rem;
+        border-radius: 15px 15px 0 0;
     }
 
-    .title {
-        font-size: 18px;
+    .elements img {
+        width: 18px;
+        height: 18px;
     }
 
     .content {
-        padding: 20px;
+        padding: 1.5rem;
+        min-height: 180px;
     }
 
-    .message {
-        font-size: 15px;
-    }
-
-    .socialLinks {
+    .buttonContainer {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.8rem;
     }
 
-    .socialLink {
-        padding: 10px 16px;
-        font-size: 13px;
+    .actionButton {
+        padding: 0.7rem 1.2rem;
+        min-width: 120px;
     }
 }
 
 @media (max-width: 480px) {
     .popup {
         width: 90vw;
-        max-width: 300px;
+        max-width: 350px;
+        border-radius: 15px;
     }
 
     .header {
-        padding: 12px 15px 8px;
+        padding: 0.6rem;
+        border-radius: 15px 15px 0 0;
     }
 
-    .title {
-        font-size: 16px;
+    .elements {
+        gap: 6px;
+    }
+
+    .elements img {
+        width: 16px;
+        height: 16px;
     }
 
     .content {
-        padding: 15px;
+        padding: 1rem;
+        min-height: 160px;
     }
 
     .message {
-        font-size: 14px;
+        font-size: 1rem;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .actionButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        min-width: 100px;
     }
 }

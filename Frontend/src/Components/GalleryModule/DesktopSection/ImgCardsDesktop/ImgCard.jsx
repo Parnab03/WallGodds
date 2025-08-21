@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Save from "/Save.svg";
+import SaveFilled from "/Save-filled.svg";
 import Heart from "/Heart.svg";
+import HeartFilled from "/Heart-filled.svg";
 import DownloadBtn from "/DownloadButton.svg";
 import Style from "./ImgCard.module.css";
 import Popup from "../../../CommonModule/PopupModule/Popup.jsx";
@@ -50,13 +52,13 @@ const ImgCard = ({ imageSrc }) => {
             <div className={Style.bottomBar}>
                 <div className={Style.icons}>
                     <img 
-                        src={Save} 
+                        src={isSaved ? SaveFilled : Save} 
                         alt="Save" 
                         className={`${Style.icon} ${isSaved ? Style.saved : ''}`}
                         onClick={handleSaveClick}
                     />
                     <img 
-                        src={Heart} 
+                        src={isLiked ? HeartFilled : Heart} 
                         alt="Heart" 
                         className={`${Style.icon} ${isLiked ? Style.liked : ''}`}
                         onClick={handleLikeClick}
