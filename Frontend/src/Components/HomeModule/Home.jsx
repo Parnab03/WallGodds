@@ -40,7 +40,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className={styles.footerWrapper}>
+        <Footer />
+      </div>
     </>
   );
 };

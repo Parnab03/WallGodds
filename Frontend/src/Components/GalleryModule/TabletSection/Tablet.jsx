@@ -30,7 +30,7 @@ const Tablet = () => {
                 <ImgCard imageSrc={img5} />
                 <ImgCard imageSrc={img6} />
             </div>
-        </div>
+        </div>     
     );
 };
 export default Tablet;

@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../CommonModule/NavBarModule/NavBar";
 import styles from "./Upload.module.css";
+import { Footer } from "../CommonModule/FooterModule/Footer";
 
 const Upload = () => {
     return (
@@ -13,6 +14,8 @@ const Upload = () => {
                     be available soon.
                 </p>
             </div>
+           
+              
         </>
     );
 };

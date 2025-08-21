@@ -4,13 +4,14 @@ import { useLocation } from "react-router-dom";
 import Gallery from "./Components/GalleryModule/Gallery";
 import "./App.css";
 import Home from "./Components/HomeModule/Home";
+import Footer from "./Components/CommonModule/FooterModule/Footer.module.css";
 import Upload from "./Components/UploadModule/Upload";
 import Aboutus from "./Components/AboutModule/Aboutus";
 import Error404 from "./Components/ErrorModule/Error404";
 import Profile from "./Components/ProfileModule/Profile";
 import useGoogleAnalytics from "./hooks/useGoogleAnalytics";
 import { pageview } from "./utils/analytics";
-// import Footer from "./Components/AboutModule/Footer";
+
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
