@@ -97,7 +97,7 @@
 
 // export default NavBar;
 
-import React from "react";
+
 import { NavLink, useLocation } from "react-router-dom";
 import Search from "/SearchIcon.svg";
 import Profile from "/ProfileIcon.svg";

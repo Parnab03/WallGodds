@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Gallery from "./Components/GalleryModule/Gallery";
 import "./App.css";
+import SignUp from "./Components/CommonModule/SignUpModule/SignUp";
 import Home from "./Components/HomeModule/Home";
 import Upload from "./Components/UploadModule/Upload";
 import Aboutus from "./Components/AboutModule/Aboutus";
@@ -28,6 +29,7 @@ function AppContent() {
             <Analytics />
             <SpeedInsights />
             <Routes>
+                <Route path="/signup" element={<SignUp />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/gallery/*" element={<Gallery />} />
                 <Route path="/upload" element={<Upload />} />
