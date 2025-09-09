@@ -4,20 +4,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(240, 240, 240, 0.8);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.193);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 247px;
+    padding-right: 560px;
     z-index: 1000;
-    backdrop-filter: blur(5px);
 }
 
 .popup {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 90vw;
-    width: 500px;
+    width: 448px;
     max-height: 90vh;
+    height: 220px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border: none;
@@ -40,21 +44,31 @@
 .header {
     background: linear-gradient(135deg, #008fff, #0066cc);
     width: 100%;
+    height: 24px;
     padding: 0.3rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 .elements {
     display: flex;
-    gap: 6px;
+    gap: 0;
+    margin-left: -0.5rem;
+}
+
+.elements img:first-child {
+    margin-right: 0.15rem;
+}
+
+.elements img:nth-child(2) {
+    margin-right: 0.15rem;
 }
 
 .elements img {
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     filter: brightness(0) invert(1);
 }
 
@@ -62,9 +76,9 @@
     background: #ff0000;
     border: none;
     color: #FFFFFF;
-    font-size: 14px;
-    width: 22px;
-    height: 22px;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -79,8 +93,8 @@
 .closeButton::after {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 2px;
+    width: 10px;
+    height: 1.55px;
     background-color: #FFFFFF;
     top: 50%;
     left: 50%;
@@ -104,16 +118,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: white;
-    min-height: 200px;
+    min-height: 160px;
 }
 
 .message {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #666;
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.5;
 }
@@ -129,13 +143,14 @@
     background: linear-gradient(135deg, #008fff, #0066cc);
     border: none;
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    min-width: 100px;
+    min-width: 80px;
+    text-decoration: none;
 }
 
 .actionButton:hover {
@@ -145,26 +160,38 @@
 
 /* Dark theme styles */
 :global(.dark-theme) .overlay {
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
 }
 
 :global(.dark-theme) .popup {
-    background-color: #1a1a1a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+:global(.dark-theme) .header {
+    background: linear-gradient(135deg, #008fff, #0066cc);
 }
 
 :global(.dark-theme) .content {
-    background: #1a1a1a;
+    background: white;
 }
 
 :global(.dark-theme) .message {
-    color: #ccc;
+    color: #666;
+}
+
+:global(.dark-theme) .actionButton {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    color: white;
+}
+
+:global(.dark-theme) .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 143, 255, 0.3);
 }
 
 /* Ensure popup is above all other elements */
-.overlay {
-    z-index: 9999;
-}
 
 /* Prevent body scroll when popup is open */
 :global(body.popup-open) {
@@ -175,7 +202,7 @@
 @media (max-width: 768px) {
     .popup {
         width: 95vw;
-        max-width: 400px;
+        max-width: 350px;
         margin: 20px;
     }
 
@@ -208,7 +235,7 @@
 @media (max-width: 480px) {
     .popup {
         width: 90vw;
-        max-width: 350px;
+        max-width: 300px;
         border-radius: 15px;
     }
 
@@ -218,7 +245,15 @@
     }
 
     .elements {
-        gap: 6px;
+        gap: 0;
+    }
+
+    .elements img:first-child {
+        margin-right: 1px;
+    }
+
+    .elements img:nth-child(2) {
+        margin-right: 3px;
     }
 
     .elements img {
