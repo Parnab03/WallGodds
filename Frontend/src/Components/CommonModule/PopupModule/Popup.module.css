@@ -1,0 +1,279 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.193);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 247px;
+    padding-right: 560px;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: white;
+    border-radius: 10px;
+    max-width: 90vw;
+    width: 448px;
+    max-height: 90vh;
+    height: 220px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    animation: popupSlideIn 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.header {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    width: 100%;
+    height: 24px;
+    padding: 0.3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.elements {
+    display: flex;
+    gap: 0;
+    margin-left: -0.5rem;
+}
+
+.elements img:first-child {
+    margin-right: 0.15rem;
+}
+
+.elements img:nth-child(2) {
+    margin-right: 0.15rem;
+}
+
+.elements img {
+    width: 12px;
+    height: 12px;
+    filter: brightness(0) invert(1);
+}
+
+.closeButton {
+    background: #ff0000;
+    border: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    position: relative;
+}
+
+.closeButton::before,
+.closeButton::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 1.55px;
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+}
+
+.closeButton::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.closeButton:hover {
+    background: #ff6666;
+    transform: scale(1.1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: white;
+    min-height: 160px;
+}
+
+.message {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 1.5rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+.buttonContainer {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.actionButton {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    min-width: 80px;
+    text-decoration: none;
+}
+
+.actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 143, 255, 0.3);
+}
+
+/* Dark theme styles */
+:global(.dark-theme) .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+:global(.dark-theme) .popup {
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+:global(.dark-theme) .header {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+}
+
+:global(.dark-theme) .content {
+    background: white;
+}
+
+:global(.dark-theme) .message {
+    color: #666;
+}
+
+:global(.dark-theme) .actionButton {
+    background: linear-gradient(135deg, #008fff, #0066cc);
+    color: white;
+}
+
+:global(.dark-theme) .actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 143, 255, 0.3);
+}
+
+/* Ensure popup is above all other elements */
+
+/* Prevent body scroll when popup is open */
+:global(body.popup-open) {
+    overflow: hidden;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .popup {
+        width: 95vw;
+        max-width: 350px;
+        margin: 20px;
+    }
+
+    .header {
+        padding: 0.8rem;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .elements img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .content {
+        padding: 1.5rem;
+        min-height: 180px;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .actionButton {
+        padding: 0.7rem 1.2rem;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 90vw;
+        max-width: 300px;
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 0.6rem;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .elements {
+        gap: 0;
+    }
+
+    .elements img:first-child {
+        margin-right: 1px;
+    }
+
+    .elements img:nth-child(2) {
+        margin-right: 3px;
+    }
+
+    .elements img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .content {
+        padding: 1rem;
+        min-height: 160px;
+    }
+
+    .message {
+        font-size: 1rem;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .actionButton {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+        min-width: 100px;
+    }
+}
