@@ -26,3 +26,72 @@
     color: #666;
     text-align: center;
 }
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 80px;
+  background: #f0eafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.sidebar button {
+  writing-mode: vertical-rl;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.sidebar button.active {
+  outline: 2px solid #7f00ff;
+}
+
+.uploadArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  min-width: 300px;
+}
+
+.uploadBox {
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #f7f6ff;
+  text-align: center;
+}
+
+.uploadBox img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.instructionPanel {
+  width: 250px;
+  padding: 50px 20px;
+  background: #fff0f5;
+  min-width: 200px;
+}
